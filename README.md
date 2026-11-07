@@ -14,7 +14,7 @@ The organisers' reference points on the scored Aug–Sep adverts are $100 (simpl
 ## Hand-in files
 - `rents_team-opal.csv` — 65,777 rows: `gnaf_id, rent_with_car_space, rent_without_car_space` (weekly $, $0.50 steps; contract-checked)
 - `report.html` — insights first, data, method, held-out results, date split, what worked and what did not, sources
-- `pitch_slides.pdf` — the 8-slide story behind the pitch video
+- `team-opal-pitch.pptx` / `pitch_slides.pdf` — the 11-slide story behind the pitch video
 - `submission/frozen_rule.json` — the rule chosen on window A; `submission/baselines.md` — the baseline ladder on windows A and B
 - `FEATURES.md` — every engineered feature (how it is built, what it did) and the LiDAR dataset (surveys, processing, per-floor view test)
 
