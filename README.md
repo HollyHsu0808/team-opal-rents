@@ -16,6 +16,7 @@ The organisers' reference points on the scored Aug–Sep adverts are $100 (simpl
 - `report.html` — insights first, data, method, held-out results, date split, what worked and what did not, sources
 - `pitch_slides.pdf` — the 8-slide story behind the pitch video
 - `submission/frozen_rule.json` — the rule chosen on window A; `submission/baselines.md` — the baseline ladder on windows A and B
+- `FEATURES.md` — every engineered feature (how it is built, what it did) and the LiDAR dataset (surveys, processing, per-floor view test)
 
 ## Who it helps
 Tenants can check whether an asking rent is high for *this* floor of *this* building; landlords can set a rent that fits the flats around them rather than the suburb average; buyers and investors can compare likely rent before they buy.
