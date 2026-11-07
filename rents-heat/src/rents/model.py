@@ -166,6 +166,8 @@ def fit(flats, train, train_end, mc):
     # index-adjusted to train_end. Flats whose only adverts have other bedroom counts take the no-history path.
     bed_adv = a["bedrooms"].clip(upper=mc["bed_cap"])
     same_bed = bed_adv.isna() | (bed_adv == a["bed"])
+    if not mc.get("own_same_bed", True):  # validated switch: own history regardless of the advert's bedroom count
+        same_bed = pd.Series(True, index=a.index)
     last = a[same_bed].sort_values("date").groupby("gnaf_id").tail(1).set_index("gnaf_id")
     adj = np.exp(last["lp_now"])
     pa_last = last["pa"].fillna(0)

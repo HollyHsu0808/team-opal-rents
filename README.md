@@ -16,6 +16,8 @@ The organisers' reference points on the scored Aug–Sep adverts are $100 (simpl
 - `report.html` — insights first, data, method, held-out results, date split, what worked and what did not, sources
 - `team-opal-pitch.pptx` / `pitch_slides.pdf` — the 11-slide story behind the pitch video
 - `submission/frozen_rule.json` — the rule chosen on window A; `submission/baselines.md` — the baseline ladder on windows A and B
+- `VALIDATION.md` — every rule validated walk-forward (6 origins) and our AVM vs regression vs gradient-boosted trees on the same held-out adverts
+- `team-opal-pitch-3min.pptx` / `.pdf` — the 3-minute deck
 - `FEATURES.md` — every engineered feature (how it is built, what it did) and the LiDAR dataset (surveys, processing, per-floor view test)
 
 ## Who it helps
