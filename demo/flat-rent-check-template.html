@@ -1,0 +1,166 @@
+<title>Flat Rent Check</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one working column — controls on the left, the estimate and its evidence trail on the right; stacks on phones. */
+:root {
+  --bg: #f4f7f8; --panel: #ffffff; --ink: #14202b; --muted: #5b6874; --line: #d6e0e5;
+  --harbour: #0b2545; --teal: #13838f; --coral: #d9542f; --tint: #e8f2f4;
+  --display: "Source Serif 4", Cambria, Georgia, serif; --body: "IBM Plex Sans", "Segoe UI", Arial, sans-serif; --mono: "IBM Plex Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0c1620; --panel: #13212d; --ink: #e6eef3; --muted: #9db0bd; --line: #2a3b48;
+  --harbour: #9fd3e6; --teal: #4fc0c9; --coral: #ff8a63; --tint: #182a37; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0c1620; --panel: #13212d; --ink: #e6eef3; --muted: #9db0bd; --line: #2a3b48;
+  --harbour: #9fd3e6; --teal: #4fc0c9; --coral: #ff8a63; --tint: #182a37; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 32px; }
+.wrap { max-width: 1080px; margin: 0 auto; display: grid; gap: 18px; }
+header h1 { font-family: var(--display); font-size: clamp(26px, 4vw, 36px); margin: 0; color: var(--harbour); text-wrap: balance; }
+header p { margin: 4px 0 0; color: var(--muted); }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.chip { font-family: var(--mono); font-size: 12.5px; padding: 3px 9px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--muted); }
+.grid { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 760px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 14px; min-width: 0; }
+label { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 5px; }
+input, select { width: 100%; box-sizing: border-box; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.seg { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { flex: 1; font: inherit; border: 0; padding: 8px 4px; background: var(--bg); color: var(--ink); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--harbour); color: var(--panel); font-weight: 600; }
+.hint { font-size: 13px; color: var(--muted); margin: 0; }
+.est { display: flex; flex-wrap: wrap; gap: 22px; align-items: end; }
+.big { font-family: var(--display); font-size: clamp(44px, 7vw, 64px); font-weight: 700; color: var(--coral); line-height: 1; font-variant-numeric: tabular-nums; }
+.sub { font-family: var(--mono); color: var(--muted); font-size: 14px; }
+.tier { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--tint); color: var(--teal); }
+ol.trail { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+ol.trail li { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 10px 12px; border-radius: 8px; background: var(--tint); }
+ol.trail li .what { min-width: 0; }
+ol.trail li .what b { display: block; }
+ol.trail li .what span { color: var(--muted); font-size: 13.5px; }
+ol.trail li .val { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 500; white-space: nowrap; align-self: center; }
+ol.trail li.off { opacity: .55; }
+.views { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.views div { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; }
+.views b { font-family: var(--mono); font-size: 17px; display: block; }
+.views small { color: var(--muted); }
+footer { color: var(--muted); font-size: 12.5px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Flat Rent Check</h1>
+    <p>Team-Opal's evidence-weighting AVM, running live on the parameters of the final model (adverts to 31 Jul 2026). Pick a building, a floor and a flat; add a past advert if you know one.</p>
+    <div class="stats"><span class="chip">held-out Jun–Jul 2026: $45 typical miss</span><span class="chip">77% within $100</span><span class="chip">R² 0.88</span><span class="chip" id="nb"></span></div>
+  </header>
+
+  <div class="grid">
+    <section class="panel" aria-label="Flat">
+      <div><label for="bld">Building</label><input id="bld" list="bldlist" autocomplete="off"><datalist id="bldlist"></datalist>
+        <p class="hint" id="bldhint"></p></div>
+      <div class="row">
+        <div><label for="bed">Bedrooms</label><select id="bed"></select></div>
+        <div><label for="floor">Floor</label><select id="floor"></select></div>
+      </div>
+      <div><label>Car space</label><div class="seg" role="group" aria-label="Car space"><button id="pk1" aria-pressed="false">With car space</button><button id="pk0" aria-pressed="true">Without</button></div></div>
+      <div><label>This flat's own past advert (optional)</label>
+        <div class="row"><input id="pr" inputmode="numeric" placeholder="Weekly rent, e.g. 850"><input id="pm" type="month" min="2016-01" max="2026-07"></div>
+        <p class="hint">Older than 3 years counts as stale and is not trusted — the building's neighbours are used instead.</p></div>
+    </section>
+
+    <section class="panel" aria-live="polite">
+      <div class="est">
+        <div><div class="big" id="out">–</div><div class="sub" id="outsub"></div></div>
+        <div><span class="tier" id="tier"></span></div>
+      </div>
+      <div><label>How this estimate was built</label><ol class="trail" id="trail"></ol></div>
+      <div><label>View from this floor (NSW LiDAR, 36 directions to 1.5 km)</label>
+        <div class="views"><div><b id="vw">–</b><small>water in sight</small></div><div><b id="vp">–</b><small>parks in sight</small></div><div><b id="vr">–</b><small>above roofs within 100 m</small></div></div></div>
+    </section>
+  </div>
+  <footer>Embedded parameters are aggregates only: monthly rent index, suburb × bedroom medians, parking premiums, building averages of at least three neighbouring flats, and LiDAR views. No individual advert is included. Source code: github.com/HollyHsu0808/team-opal-rents</footer>
+</div>
+
+<script id="params" type="application/json">__PARAMS__</script>
+<script>
+const P = JSON.parse(document.getElementById("params").textContent);
+const $ = id => document.getElementById(id);
+const K = P.rule.k || 0.5, STALE = P.rule.stale_months || 36, SNAP = P.rule.snap || 5;
+const cut = P.cutoff.split("-"), CUT_M = (+cut[0]) * 12 + (+cut[1]) - 1;
+const byLabel = new Map(P.buildings.map(b => [b.label, b]));
+$("nb").textContent = P.buildings.length + " demo buildings";
+$("bldlist").innerHTML = P.buildings.map(b => `<option value="${b.label}">`).join("");
+let parking = false;
+const money = v => "$" + Math.round(v).toLocaleString("en-AU");
+const pct = v => (v >= 0 ? "+" : "−") + Math.abs(v * 100).toFixed(1) + "%";
+const snap = v => Math.round(v / SNAP) * SNAP;
+
+function setBuilding(b) {
+  const beds = Object.keys(b.comps).sort();
+  const prevBed = $("bed").value, prevFloor = $("floor").value;
+  $("bed").innerHTML = ["0", "1", "2", "3", "4"].map(k => `<option value="${k}">${k === "0" ? "Studio" : k === "4" ? "4+" : k}${b.comps[k] ? "" : " (no neighbours)"}</option>`).join("");
+  $("bed").value = beds.includes(prevBed) ? prevBed : (beds.includes("1") ? "1" : beds[0]);
+  $("floor").innerHTML = b.views.map(v => `<option value="${v[0]}">${v[0] === 0 ? "Ground" : "Level " + v[0]}</option>`).join("");
+  const fl = b.views.map(v => String(v[0]));
+  $("floor").value = fl.includes(prevFloor) ? prevFloor : fl[Math.min(fl.length - 1, Math.floor(fl.length * 0.6))];
+  $("bldhint").textContent = `${b.suburb} · ${b.views.length} floors measured · neighbours by bedrooms: ` + beds.map(k => `${k === "0" ? "studio" : k + "-bed"} ${b.comps[k][1]}`).join(", ");
+}
+
+function compute() {
+  const b = byLabel.get($("bld").value);
+  if (!b) { $("out").textContent = "–"; return; }
+  const bed = $("bed").value, floor = +$("floor").value;
+  const lad = P.ladder[b.suburb + "|" + bed] || P.ladder[b.suburb + "|1"];
+  const [ladWo, ladW, prem] = lad;
+  const pr = parseFloat($("pr").value), pm = $("pm").value;
+  const steps = [];
+  let without, tier;
+  // own history
+  let own = null;
+  if (pr > 0 && pm) {
+    const [y, mo] = pm.split("-").map(Number), m = y * 12 + mo - 1, age = CUT_M - m;
+    const f = (P.index[b.suburb] || [])[m - P.month0];
+    if (age > STALE) steps.push({ off: true, b: "Own advert is stale", s: `${age} months old (> ${STALE}): not trusted`, v: money(pr) });
+    else if (f) { own = parking ? pr * f / Math.exp(prem) : pr * f;
+      steps.push({ b: "Own past advert, moved to July 2026", s: `${money(pr)} in ${pm} × market index ${f.toFixed(3)}`, v: money(pr * f) }); }
+  }
+  const comp = b.comps[bed];
+  const view = b.views.find(v => v[0] === floor) || b.views[0];
+  if (own) { without = own; tier = "own history"; }
+  else {
+    steps.push({ b: "Suburb ladder", s: `${b.suburb}, ${bed === "0" ? "studio" : bed + "-bed"}, last 12 months, no car space`, v: money(ladWo) });
+    if (comp) {
+      const n = comp[1], w = n / (n + K);
+      const lw = (n * comp[0] + K * Math.log(ladWo)) / (n + K);
+      without = Math.exp(lw); tier = "building neighbours";
+      steps.push({ b: `Same-building neighbours, one vote each (${n} flats)`, s: `weight ${(w * 100).toFixed(0)}% neighbours, ${(100 - w * 100).toFixed(0)}% suburb`, v: money(Math.exp(comp[0])) });
+      if (comp[2] != null) {
+        const d = P.view_beta.water * (view[1] - comp[2]) + P.view_beta.park * (view[2] - comp[3]) + P.view_beta.roofline * (view[3] - comp[4]);
+        const lift = Math.exp(w * d);
+        steps.push({ b: "Floor view vs the neighbours", s: `water ${(view[1] * 100).toFixed(0)}% vs ${(comp[2] * 100).toFixed(0)}%, parks ${(view[2] * 100).toFixed(0)}% vs ${(comp[3] * 100).toFixed(0)}%, above roofs ${(view[3] * 100).toFixed(0)}% vs ${(comp[4] * 100).toFixed(0)}%`, v: pct(lift - 1) });
+        without *= lift;
+      }
+    } else { without = ladWo; tier = "suburb ladder"; }
+  }
+  const withC = without * Math.exp(prem);
+  steps.push({ b: "Car-space premium", s: `${b.suburb}, ${bed === "0" ? "studio" : bed + "-bed"}: ${pct(Math.exp(prem) - 1)}`, v: parking ? "applied" : "not applied", off: !parking });
+  steps.push({ b: "Asking-rent grid", s: `rounded to the nearest $${SNAP} (84% of Sydney asking rents end in $0)`, v: "$" + SNAP });
+  const est = snap(parking ? withC : without);
+  $("out").textContent = money(est) + " /wk";
+  $("outsub").textContent = `with car space ${money(snap(withC))} · without ${money(snap(without))}`;
+  $("tier").textContent = "Evidence: " + tier;
+  $("trail").innerHTML = steps.map(s => `<li class="${s.off ? "off" : ""}"><div class="what"><b>${s.b}</b><span>${s.s}</span></div><div class="val">${s.v}</div></li>`).join("");
+  $("vw").textContent = (view[1] * 100).toFixed(0) + "%"; $("vp").textContent = (view[2] * 100).toFixed(0) + "%"; $("vr").textContent = (view[3] * 100).toFixed(0) + "%";
+}
+
+$("bld").addEventListener("change", () => { const b = byLabel.get($("bld").value); if (b) { setBuilding(b); compute(); } });
+$("bld").addEventListener("input", () => { const b = byLabel.get($("bld").value); if (b) { setBuilding(b); compute(); } });
+["bed", "floor", "pr", "pm"].forEach(id => $(id).addEventListener("input", compute));
+$("pk1").addEventListener("click", () => { parking = true; $("pk1").setAttribute("aria-pressed", "true"); $("pk0").setAttribute("aria-pressed", "false"); compute(); });
+$("pk0").addEventListener("click", () => { parking = false; $("pk0").setAttribute("aria-pressed", "true"); $("pk1").setAttribute("aria-pressed", "false"); compute(); });
+const start = byLabel.get("45 Shelley Street, Sydney") || P.buildings[0];
+$("bld").value = start.label; setBuilding(start); compute();
+</script>
