@@ -1,0 +1,350 @@
+{
+ "nsw-cadastre-web-service": {
+  "name": "nsw-cadastre-web-service",
+  "title": "NSW Cadastre Web Service",
+  "license_id": "cc-at-3",
+  "license_title": "Creative Commons Attribution 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/au/",
+  "metadata_modified": "2026-05-07T13:43:46.735486",
+  "url": null,
+  "author": null,
+  "organization": "Spatial Services (DCS)",
+  "notes_excerpt": "NSW Cadastre web service is a dynamic map of cadastral features extracted from the NSW Digital Cadastral Database (DCDB). It provides access to a state wide integrated database and a component of the foundation spatial datasets within the New South Wales. A \u201ccadastre\u201d is an official register of property showing boundaries. The DCDB contains current land titles only. The cadastral feature class lay",
+  "extras": {},
+  "resources": [
+   [
+    "Show on SEED Web Map",
+    "SEED Web Map",
+    null,
+    "https://geo.seed.nsw.gov.au/Public_Viewer/index.html?viewer=Public_Viewer&locale=en-AU&runWorkflow=AppendLayerCatalog&CatalogLayer=SEED_Catalog.5.PlanExtent_Labels,SEED_Catalog.5.SectionExtent_Labels,SEED_Catalog.5.Lot_Labels,SEED_Catalog.5.Large_Rural_PlanExtent,SEED_Catalog.5.Rural_PlanExtent,SEED_Catalog.5.SectionExtent,SEED_Catalog.5.PlanExtent,SEED_Catalog.5.Lot"
+   ],
+   [
+    "External Metadata Page - NSW Cadastre Web Service",
+    "URL",
+    null,
+    "https://portal.spatial.nsw.gov.au/portal/home/item.html?id=6a96afdba8d6407d8bde5a3bbacb0f02"
+   ],
+   [
+    "PDF Data Quality Statement - NSW Cadastre Web Service",
+    "PDF",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/4a6f9220-127b-4e9f-a785-229f2c1453db/resource/09706db6-50dd-46f8-88f8-8059e92b7dd1/download/nsw_cadastrewebservicedqs.pdf"
+   ],
+   [
+    "WMS - NSW Cadastre Web Service",
+    "WMS",
+    null,
+    "http://maps.six.nsw.gov.au/arcgis/services/public/NSW_Cadastre/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+   ],
+   [
+    "ArcGIS REST SERVICE - NSW Cadastre Web Service",
+    "Esri REST",
+    null,
+    "http://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Cadastre/MapServer"
+   ]
+  ],
+  "_api": "https://data.nsw.gov.au/data/api/3/action/package_show"
+ },
+ "spatial-services-nsw-cadastre": {
+  "name": "spatial-services-nsw-cadastre",
+  "title": "Spatial Services - NSW Cadastre",
+  "license_id": "cc-by",
+  "license_title": "Creative Commons Attribution",
+  "license_url": "http://www.opendefinition.org/licenses/cc-by",
+  "metadata_modified": "2021-04-20T02:05:46.062785",
+  "url": null,
+  "author": "Spatial Services (DFSI)",
+  "organization": "Department of Customer Service",
+  "notes_excerpt": "NSW Cadastre web service is a dynamic map of cadastral features extracted from the NSW Digital Cadastral Database (DCDB). It provides access to a state wide integrated database and a component of the foundation spatial datasets within the New South Wales.\r\n\r\nA \u201ccadastre\u201d is an official register of property showing boundaries. The DCDB contains current land titles only.\r\n\r\nThe cadastral feature cla",
+  "extras": {},
+  "resources": [
+   [
+    "Spatial Services - NSW Cadastre Web Service ",
+    "PDF",
+    165426,
+    "https://data.nsw.gov.au/data/dataset/b8659c69-7666-4b5d-97a9-3c5036f50315/resource/ea4c619f-c5de-477e-9664-1311e478789a/download/web-service-profile-nsw-cadastre-web-service.pdf"
+   ],
+   [
+    "NSW Cadastre Web Service - Metadata",
+    "",
+    null,
+    "https://sdi.nsw.gov.au/catalog/search/resource/details.page?uuid={1AF21EC5-C147-427A-937E-237B3A1C89DC}"
+   ],
+   [
+    "NSW Cadastre Web Service - Map Server",
+    "web service",
+    null,
+    "https://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Cadastre/MapServer"
+   ],
+   [
+    "Data Quality Statement - XML",
+    "DQS - XML",
+    null,
+    "https://data.nsw.gov.au/data/dataset/b8659c69-7666-4b5d-97a9-3c5036f50315/resource/ffbc87bb-bdd6-4239-b665-fbe1c1001218/download/nsw-cadastre-web-servicedataqualitytoolstatement06jul16.xml"
+   ],
+   [
+    "Data Quality Statement - PDF",
+    "DQS - PDF",
+    null,
+    "https://data.nsw.gov.au/data/dataset/b8659c69-7666-4b5d-97a9-3c5036f50315/resource/8ba246f4-04e4-416c-a7b0-d1e227dc251d/download/nsw-cadastre-web-servicedataqualitytoolstatement6-7-2016.pdf"
+   ]
+  ],
+  "_api": "https://data.nsw.gov.au/data/api/3/action/package_show"
+ },
+ "urban-tree-canopy-cover-for-greater-sydney-2022": {
+  "name": "urban-tree-canopy-cover-for-greater-sydney-2022",
+  "title": "Greater Sydney Region Tree Canopy to Modified Mesh Block 2022",
+  "license_id": "cc-by",
+  "license_title": "Creative Commons Attribution",
+  "license_url": "http://www.opendefinition.org/licenses/cc-by",
+  "metadata_modified": "2026-10-01T12:36:02.150565",
+  "url": null,
+  "author": null,
+  "organization": "NSW Department of Planning, Housing and Infrastructure",
+  "notes_excerpt": "The Greater Sydney Region Tree Canopy to Modified Mesh Block 2022 provides both an area and percentage of canopy for city blocks and infrastructure corridors in the Greater Sydney Region as of 2022. With this dataset users can estimate tree canopy for many geographic areas (map scales), from larger local government area and precincts down to mesh block (ABS) and modified mesh block (smallest scale",
+  "extras": {},
+  "resources": [
+   [
+    "Data Quality Statement",
+    "PDF",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/urban-tree-canopy-cover-for-greater-sydney-2022/resource/data_quality_report/pdp"
+   ],
+   [
+    "Metadata for 2022 Greater Sydney canopy data to Modified Mesh Block",
+    "PDF",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/4fc71c24-ebc2-4029-b19b-6259d00107d0/resource/521a1325-e071-4c8e-8db9-22af93ca26e4/download/gsr_2022_mmb_metadata.pdf"
+   ],
+   [
+    "Download Package",
+    "ZIP",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/4fc71c24-ebc2-4029-b19b-6259d00107d0/resource/e9a5d785-3298-4b68-b2b7-3738862bbf49/download/planning_gsr_2022_treecanopycover_mmb_gda94.zip"
+   ],
+   [
+    "Download Package",
+    "ZIP",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/4fc71c24-ebc2-4029-b19b-6259d00107d0/resource/7f792da2-badb-4218-9cd0-7ce5c5c547b0/download/planning_gsr_2022_treecanopycover_mmb_gda2020.zip"
+   ],
+   [
+    "ArcGIS REST Service - Greater Sydney all veg canopy cover 2022",
+    "ARCGIS REST SERVICE",
+    null,
+    "https://mapprod2.environment.nsw.gov.au/arcgis/rest/services/UHGC/Greater_Syd_All_Veg_Canopy_Cover_2022/MapServer"
+   ],
+   [
+    "ArcGIS REST Service - Greater Sydney tree canopy cover 2022",
+    "ARCGIS REST SERVICE",
+    null,
+    "https://mapprod2.environment.nsw.gov.au/arcgis/rest/services/UHGC/Greater_Syd_Tree_Canopy_Cover_2022/MapServer"
+   ],
+   [
+    "Tree Canopy Summarised by LGA and Suburb (2022 and 2019)",
+    "XLSX",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/4fc71c24-ebc2-4029-b19b-6259d00107d0/resource/5b2919d4-54ba-4d06-918b-f58fccb68731/download/tree-canopy-summarised-by-lga-and-suburb-2022-and-2019.xlsx"
+   ],
+   [
+    "2022 Canopy Data Methodology Report",
+    "PDF",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/4fc71c24-ebc2-4029-b19b-6259d00107d0/resource/13f7a5ae-a66b-4230-b54e-a948cb8cf345/download/2022-canopy-data-methodology-report.pdf"
+   ]
+  ],
+  "_api": "https://data.nsw.gov.au/data/api/3/action/package_show"
+ },
+ "nsw-urban-heat-island-to-modified-mesh-block-2016": {
+  "name": "nsw-urban-heat-island-to-modified-mesh-block-2016",
+  "title": "NSW Urban Heat Island to Modified Mesh Block 2016",
+  "license_id": "cc-by",
+  "license_title": "Creative Commons Attribution",
+  "license_url": "http://www.opendefinition.org/licenses/cc-by",
+  "metadata_modified": "2026-10-01T11:05:54.008250",
+  "url": null,
+  "author": null,
+  "organization": "NSW Department of Climate Change, Energy, the Environment and Water",
+  "notes_excerpt": "The Urban Heat Island (UHI) dataset measures the effects of urbanisation on land surface temperatures across Sydney Greater Metropolitan Area for the Summer of 2015-2016.  \r\nUHI shows the variation of temperature to a non-urban vegetated reference, such as heavily wooded areas or national parks around Sydney.  \r\nDerived from the analysis of thermal and infrared data from Landsat satellite, the dat",
+  "extras": {},
+  "resources": [
+   [
+    "Data Quality Statement",
+    "PDF",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/nsw-urban-heat-island-to-modified-mesh-block-2016/resource/data_quality_report/pdp"
+   ],
+   [
+    "Estimation of Land Surface Temperature and Urban Heat Island effect for Australian urban centres. CSIRO Report EP173542.",
+    "PDF",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/b07a128b-00bf-4f07-b767-a5b27ae283f9/resource/6309a772-ca48-4352-b849-2ecae60a18ec/download/csiroep173542uhi-method2017.pdf"
+   ],
+   [
+    "User guide for OEH urban heat and green cover datasets",
+    "PDF",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/b07a128b-00bf-4f07-b767-a5b27ae283f9/resource/ebc0f1f9-3126-4b28-84cc-1982c6f18808/download/oehuhgcdatauserguidemarch2019.pdf"
+   ],
+   [
+    "Download Package",
+    "ZIP",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/b07a128b-00bf-4f07-b767-a5b27ae283f9/resource/6c10132f-8bcc-4b09-bf2a-34314cd6ca33/download/climateuhimmbsua2016.zip"
+   ],
+   [
+    "ArcGIS Layer files for mapping Urban Heat Island and Heat Vulnerability Index",
+    "ZIP",
+    null,
+    "https://www.planningportal.nsw.gov.au/opendata/dataset/b07a128b-00bf-4f07-b767-a5b27ae283f9/resource/5704fe14-098c-4c06-a6ac-4f5f0e5d09fa/download/2016uhihvilayerfiles.zip"
+   ],
+   [
+    "ArcGIS REST Service - Urban Heat Island",
+    "ARCGIS REST SERVICE",
+    null,
+    "https://mapprod2.environment.nsw.gov.au/arcgis/rest/services/UHGC/UHGC/MapServer"
+   ],
+   [
+    "WMS - Urban Heat Island",
+    "WMS",
+    null,
+    "https://mapprod2.environment.nsw.gov.au/arcgis/services/UHGC/UHGC/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+   ],
+   [
+    "Land surface temperature and urban heat island estimates for Australian urban centres 2015/16",
+    "GEOTIFF",
+    null,
+    "https://doi.org/10.4225/08/59bf0ce837385"
+   ]
+  ],
+  "_api": "https://data.nsw.gov.au/data/api/3/action/package_show"
+ },
+ "2022-heat-vulnerability-index-for-the-greater-sydney-region": {
+  "name": "2022-heat-vulnerability-index-for-the-greater-sydney-region",
+  "title": "2022 Heat Vulnerability Index for the Greater Sydney Region",
+  "license_id": "cc-by",
+  "license_title": "Creative Commons Attribution",
+  "license_url": "http://www.opendefinition.org/licenses/cc-by",
+  "metadata_modified": "2026-10-03T01:57:23.038620",
+  "url": null,
+  "author": null,
+  "organization": "NSW Department of Planning, Housing and Infrastructure",
+  "notes_excerpt": "The 2022 Heat Vulnerability Index (HVI) for Greater Sydney aims to combine information on urban heat, built form and population demographics to provide a fine-grained understanding of the spatial distribution of heat vulnerable populations.\r\n\r\nThe Index combines indicators of heat exposure, sensitivity to heat, and adaptive capacity to produce the composite vulnerability index. The 2022 HVI datase",
+  "extras": {},
+  "resources": [
+   [
+    "Data Quality Statement",
+    "PDF",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/2022-heat-vulnerability-index-for-the-greater-sydney-region/resource/data_quality_report/pdf"
+   ],
+   [
+    "2022 Heat Vulnerability Index Dataset Methodology Report (oct 2025)",
+    "PDF",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/1eb5b707-16c2-46ce-82b9-ea6771112f75/download/heat-vulnerability-index-dataset-methodology-report_oct_2025.pdf"
+   ],
+   [
+    "2022 Heat Vulnerability Index for Greater Sydney Geodatabase",
+    "GIS FILE",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/8fc794f4-43cf-4b0b-bc16-9d27c312ac26/download/hvi_sydney_2022.gdb.zip"
+   ],
+   [
+    "2022 Heat Vulnerability Index for Greater Sydney Geopackage",
+    "GIS FILE",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/1683afa4-b557-43ee-9e72-3b707e22a36c/download/hvi_sydney_2022.gpkg"
+   ],
+   [
+    "2022 Heat Vulnerability Index Tabular Data",
+    "XLSX",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/1bed96db-376e-422e-b2ef-3d121cbf8676/download/sydney_hvi_2022_tabular.xlsx"
+   ],
+   [
+    "2022 Heat Vulnerability Index for Greater Sydney Metadata",
+    "PDF",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/26ac240c-6971-41c2-b7cd-43c8919ab44a/download/metadata_gdb.pdf"
+   ],
+   [
+    "Land Surface Temperature for Greater Sydney Summer 2022-2023",
+    "GEOTIFF",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/b081a8de-ca2e-4693-b961-706cd9f2c6ad/download/lst_sydney_2022-2023_summer.tif"
+   ],
+   [
+    "Metadata for Greater Sydney LST Summer 2022-2023",
+    "PDF",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/331d6b3a-951f-4ce6-89e0-53b1684bb585/download/metadata_lst_sydney_2022-2023_summer.pdf"
+   ]
+  ],
+  "_api": "https://data.nsw.gov.au/data/api/3/action/package_show"
+ },
+ "08c39277-8b70-4c4d-905e-5c931c2eef08": {
+  "name": "2022-heat-vulnerability-index-for-the-greater-sydney-region",
+  "title": "2022 Heat Vulnerability Index for the Greater Sydney Region",
+  "license_id": "cc-by",
+  "license_title": "Creative Commons Attribution 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "metadata_modified": "2026-10-01T06:57:08.373756",
+  "url": null,
+  "author": null,
+  "organization": "NSW Department of Planning, Housing and Infrastructure",
+  "notes_excerpt": "The 2022 Heat Vulnerability Index (HVI) for Greater Sydney aims to combine information on urban heat, built form and population demographics to provide a fine-grained understanding of the spatial distribution of heat vulnerable populations.\r\n\r\nThe Index combines indicators of heat exposure, sensitivity to heat, and adaptive capacity to produce the composite vulnerability index. The 2022 HVI datase",
+  "extras": {},
+  "resources": [
+   [
+    "Show on SEED Web Map",
+    "SEED Web Map",
+    null,
+    "https://geo.seed.nsw.gov.au/vertigisstudio/web/?app=cabd04d595ec43c1aaf4298e80e83ec2&workflow=36ea26c1-e8e2-4355-8600-5d1558259ad3&workflowParams={\"portalItems\": [{\"itemId\": \"aa58f2f8cfd94257a16b45a4f1b5f202\", \"layerIds\": \"0\"}]}"
+   ],
+   [
+    "Data Quality Statement",
+    "PDF",
+    null,
+    "https://datasets.seed.nsw.gov.au/dataset/2022-heat-vulnerability-index-for-the-greater-sydney-region/resource/data_quality_report/pdf"
+   ],
+   [
+    "2022 Heat Vulnerability Index Dataset Methodology Report (oct 2025)",
+    "PDF",
+    5119910,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/1eb5b707-16c2-46ce-82b9-ea6771112f75/download/heat-vulnerability-index-dataset-methodology-report_oct_2025.pdf"
+   ],
+   [
+    "2022 Heat Vulnerability Index for Greater Sydney Geodatabase",
+    "GIS FILE",
+    31541963,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/8fc794f4-43cf-4b0b-bc16-9d27c312ac26/download/hvi_sydney_2022.gdb.zip"
+   ],
+   [
+    "2022 Heat Vulnerability Index for Greater Sydney Geopackage",
+    "GIS FILE",
+    66138112,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/1683afa4-b557-43ee-9e72-3b707e22a36c/download/hvi_sydney_2022.gpkg"
+   ],
+   [
+    "2022 Heat Vulnerability Index Tabular Data",
+    "XLSX",
+    2002581,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/1bed96db-376e-422e-b2ef-3d121cbf8676/download/sydney_hvi_2022_tabular.xlsx"
+   ],
+   [
+    "2022 Heat Vulnerability Index for Greater Sydney Metadata",
+    "PDF",
+    97519,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/26ac240c-6971-41c2-b7cd-43c8919ab44a/download/metadata_gdb.pdf"
+   ],
+   [
+    "Land Surface Temperature for Greater Sydney Summer 2022-2023",
+    "GEOTIFF",
+    309476196,
+    "https://datasets.seed.nsw.gov.au/dataset/08c39277-8b70-4c4d-905e-5c931c2eef08/resource/b081a8de-ca2e-4693-b961-706cd9f2c6ad/download/lst_sydney_2022-2023_summer.tif"
+   ]
+  ],
+  "_api": "https://datasets.seed.nsw.gov.au/api/3/action/package_show"
+ }
+}

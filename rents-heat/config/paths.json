@@ -1,0 +1,39 @@
+{
+  "_doc": "Relative to rents-heat/. Everything under data_private/ is gitignored.",
+  "real": {
+    "input": "data_private/real/rents-input-flats-city-of-sydney.csv",
+    "past_leases": "data_private/real/rents-past-leases-city-of-sydney.csv",
+    "api_rent_history": "data_private/api/listings_rent_history.parquet",
+    "out": "data_private/out"
+  },
+  "synthetic": {
+    "input": "data_private/synthetic/rents-input-flats-city-of-sydney.csv",
+    "past_leases": "data_private/synthetic/rents-past-leases-city-of-sydney.csv",
+    "api_rent_history": "data_private/synthetic/api/listings_rent_history.parquet",
+    "scoring": "data_private/synthetic/scoring_adverts_2026-08_09.csv",
+    "out": "data_private/out/synthetic"
+  },
+  "apiproxy": {
+    "_doc": "Dry-run profile before the official input file arrives: flats = every flat with an advert in the API pull (src/rents/build_api_proxy_input.py); adverts = the API parquet.",
+    "input": "data_private/apiproxy/rents-input-flats-apiproxy.csv",
+    "past_leases": "data_private/apiproxy/NO_PAST_LEASES_FILE.csv",
+    "api_rent_history": "data_private/api/listings_rent_history.parquet",
+    "out": "data_private/out/apiproxy"
+  },
+  "public": {
+    "derived": "../public-data/_derived",
+    "osm_buildings": "../public-data/osm/osm_buildings_bbox.json"
+  },
+  "suburbs_33": ["Alexandria", "Barangaroo", "Beaconsfield", "Camperdown", "Centennial Park", "Chippendale",
+    "Darlinghurst", "Darlington", "Dawes Point", "Elizabeth Bay", "Erskineville", "Eveleigh", "Forest Lodge",
+    "Glebe", "Haymarket", "Millers Point", "Moore Park", "Potts Point", "Pyrmont", "Redfern", "Rosebery",
+    "Rushcutters Bay", "Surry Hills", "Sydney", "The Rocks", "Ultimo", "Waterloo", "Woolloomooloo", "Zetland",
+    "Newtown", "Paddington", "St Peters", "Annandale"],
+  "api_suburb_suffix": " (NSW)",
+  "_api_suburbs_29_doc": "Exact ABS SAL names the API accepts (resolved with /v1/geocode/suburb on 2026-11-07); Newtown, Paddington, St Peters, Annandale are not served by the API (403).",
+  "api_suburbs_29": ["Alexandria", "Barangaroo", "Beaconsfield (NSW)", "Camperdown (NSW)", "Centennial Park (NSW)",
+    "Chippendale", "Darlinghurst", "Darlington (Sydney - NSW)", "Dawes Point", "Elizabeth Bay", "Erskineville",
+    "Eveleigh", "Forest Lodge", "Glebe (NSW)", "Haymarket", "Millers Point", "Moore Park", "Potts Point", "Pyrmont",
+    "Redfern", "Rosebery (NSW)", "Rushcutters Bay", "Surry Hills", "Sydney", "The Rocks (Sydney - NSW)", "Ultimo",
+    "Waterloo (NSW)", "Woolloomooloo", "Zetland"]
+}

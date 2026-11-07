@@ -1,0 +1,9 @@
+,n,median_abs_err,within100,r2
+bedrooms only (last 12m),4920.0,125.0,0.461,0.408
+postcode x bedrooms (last 12m),4920.0,100.0,0.515,0.53
+bedrooms only (last 6m),4920.0,130.0,0.431,0.404
+postcode x bedrooms (last 6m),4920.0,100.0,0.507,0.529
+bedrooms only (last 3m),4920.0,125.0,0.461,0.409
+postcode x bedrooms (last 3m),4920.0,100.0,0.506,0.53
+"postcode x bedrooms (12m, drift-adjusted)",4920.0,105.1,0.484,0.528
+"REFERENCE (hindsight, not a lower bound): test-period postcode x bedrooms median",4920.0,100.0,0.514,0.555

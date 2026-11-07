@@ -1,0 +1,8 @@
+{
+  "_doc": "Advert-date windows (SPEC.md Method). Training uses adverts dated <= train_end only; hard_cutoff is the task rule.",
+  "hard_cutoff": "2026-07-31",
+  "A": {"train_end": "2026-04-30", "test_start": "2026-05-01", "test_end": "2026-05-31", "role": "select rules"},
+  "B": {"train_end": "2026-05-31", "test_start": "2026-06-01", "test_end": "2026-07-31", "role": "evaluate once, frozen"},
+  "final": {"train_end": "2026-07-31", "test_start": null, "test_end": null, "role": "predict all input flats"},
+  "synthetic_scoring": {"test_start": "2026-08-01", "test_end": "2026-09-30", "_doc": "synthetic only: Aug-Sep 2026 adverts held in a separate scoring file"}
+}

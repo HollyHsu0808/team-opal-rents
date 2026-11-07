@@ -1,0 +1,20 @@
+{
+  "years": [
+    2013,
+    2020
+  ],
+  "crs": "EPSG:7856",
+  "n_buildings": 4399,
+  "coverage_h_latest": 0.9993180268242783,
+  "median_h_latest": 15.26643352508545,
+  "corr_lidar_levels_vs_osm": 0.7231068037276325,
+  "new_2013_2020": 79,
+  "floor_rows": 29970,
+  "share_floors_water_view": 0.15492158825492158,
+  "share_floors_above_roofline": 0.009175842509175842,
+  "under_16_34_path_1km": 456,
+  "runtime_s": 164.76002430915833,
+  "views_version": 2,
+  "share_floors_clear_half_directions": 0.13533533533533534,
+  "views_v2_runtime_s": 22.359369039535522
+}

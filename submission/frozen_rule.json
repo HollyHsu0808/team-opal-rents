@@ -1,0 +1,118 @@
+{
+ "method": "onevote",
+ "k": 0.5,
+ "stale_m": 36,
+ "stale_w": 0.0,
+ "snap": 5,
+ "candidate": "onevote_k0.5_stale36w0.0",
+ "selected_on": "A",
+ "data": "real",
+ "validation": "ok",
+ "rule": "best of {plain, one-vote k grid} x {stale handling} on overall MedAE (tie: share<=100); accepted only if overall MedAE beats the floor and share<=100 does not drop; snap kept only if MedAE improves",
+ "floor_all": {
+  "n": 1318,
+  "medae": 57.28,
+  "within100": 0.6935,
+  "r2": 0.7969,
+  "coverage": 1.0
+ },
+ "best_all": {
+  "n": 1318,
+  "medae": 46.51,
+  "within100": 0.7838,
+  "r2": 0.8625,
+  "coverage": 1.0
+ },
+ "snap_all": {
+  "5": 45.0,
+  "10": 50.0
+ },
+ "frozen_at": "2026-11-07 12:21:11",
+ "public": {
+  "X_cols": [
+   "water_view_frac",
+   "park_view_frac",
+   "roofline_clear_frac",
+   "ndsm10",
+   "air_path",
+   "new_build",
+   "age_decades"
+  ],
+  "beta": [
+   0.2547732930540823,
+   0.11229970439762699,
+   0.031207158803890186,
+   0.002956391143758258,
+   -0.02031746820326144,
+   -0.03942971169308375,
+   -0.06111090068686745
+  ],
+  "center": -0.1027540203248715,
+  "means": {
+   "water_view_frac": 0.021277859836011416,
+   "park_view_frac": 0.0978360604374876,
+   "roofline_clear_frac": 0.1954118257637277,
+   "ndsm10": 3.6860383455918564,
+   "air_path": 0.11298459649728568,
+   "new_build": 0.059945138209510654,
+   "age_decades": 2.1117050598531337
+  },
+  "apply": false,
+  "selected_on": "A",
+  "rule": "apply only if no-history MedAE improves, overall MedAE does not worsen and share<=100 does not drop",
+  "A_no_history": {
+   "base": 65.0,
+   "plus_public": 74.53
+  },
+  "A_all": {
+   "base": 45.0,
+   "plus_public": 50.0
+  }
+ },
+ "public_within": true,
+ "public_within_evidence": {
+  "selected_on": "A (after the base rule was frozen; second A comparison, disclosed)",
+  "A": {
+   "all_medae": [
+    45.0,
+    45.0
+   ],
+   "all_within100": [
+    0.7906,
+    0.7921
+   ],
+   "r2": [
+    0.8624,
+    0.8638
+   ],
+   "no_history_within100": [
+    0.6582,
+    0.6709
+   ]
+  },
+  "B": {
+   "all_medae": [
+    45.0,
+    45.0
+   ],
+   "all_within100": [
+    0.7712,
+    0.7712
+   ],
+   "r2": [
+    0.8774,
+    0.8798
+   ],
+   "no_history_within100": [
+    0.6894,
+    0.6854
+   ]
+  },
+  "beta_within_A": {
+   "water_view_frac": 0.1634,
+   "park_view_frac": 0.0617,
+   "roofline_clear_frac": 0.0477
+  },
+  "P2_ladder_only": "rejected on A (own-history MedAE 40 -> 45 via stale rows, R2 down)"
+ }
+}

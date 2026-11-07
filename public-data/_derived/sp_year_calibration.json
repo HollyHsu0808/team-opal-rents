@@ -1,0 +1,86 @@
+{
+ "registration_like_subset_ge45000": {
+  "n": 2108,
+  "spearman_rho": 0.9783,
+  "share_within_1yr_of_envelope": 0.876,
+  "share_more_than_2yr_above": 0.071,
+  "implied_year_lower_envelope": {
+   "10000": "out of range (pre-DCDB numbers; createdate is a capture date, not registration)",
+   "50000": 1995.39,
+   "80000": 2007.84,
+   "100000": 2019.58
+  },
+  "plans_per_year_recent": 1863.0
+ },
+ "n_sp_plans": 3357,
+ "n_bulk_or_pre1994_excluded": 1137,
+ "n_used": 2220,
+ "spearman_rho": 0.9503,
+ "spearman_p": 0.0,
+ "share_resid_gt_1yr_vs_isotonic": 0.2,
+ "median_abs_resid_years": 0.43,
+ "plannumber_range_used": [
+  74,
+  111985
+ ],
+ "linear_fit_year_per_10k_plans": 3.595,
+ "implied": {
+  "10000": {
+   "isotonic_year": 1997.5,
+   "median_year_within_1500": 2001.73,
+   "n_within_1500": 7
+  },
+  "50000": {
+   "isotonic_year": 1997.5,
+   "median_year_within_1500": 1995.66,
+   "n_within_1500": 92
+  },
+  "80000": {
+   "isotonic_year": 2008.42,
+   "median_year_within_1500": 2008.34,
+   "n_within_1500": 78
+  },
+  "100000": {
+   "isotonic_year": 2020.31,
+   "median_year_within_1500": 2019.75,
+   "n_within_1500": 65
+  }
+ },
+ "createdate_year_counts_all": {
+  "1992": 51,
+  "1993": 1064,
+  "1994": 82,
+  "1995": 94,
+  "1996": 89,
+  "1997": 94,
+  "1998": 87,
+  "1999": 128,
+  "2000": 155,
+  "2001": 130,
+  "2002": 105,
+  "2003": 147,
+  "2004": 60,
+  "2005": 108,
+  "2006": 85,
+  "2007": 55,
+  "2008": 47,
+  "2009": 47,
+  "2010": 55,
+  "2011": 46,
+  "2012": 40,
+  "2013": 59,
+  "2014": 46,
+  "2015": 56,
+  "2016": 56,
+  "2017": 77,
+  "2018": 65,
+  "2019": 54,
+  "2020": 37,
+  "2021": 31,
+  "2022": 18,
+  "2023": 20,
+  "2024": 34,
+  "2025": 14,
+  "2026": 21
+ }
+}

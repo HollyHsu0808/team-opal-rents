@@ -1,0 +1,14 @@
+# Never commit: keys, organiser data, API output (task rules)
+.env
+**/.env
+*.key
+**/data_private/
+public-data/organiser/*
+
+# Environments / caches
+**/.venv/
+__pycache__/
+*.pyc
+# Too large for git (LiDAR rasters and raw point clouds: rebuild with public-data/_scripts, see README)
+public-data/lidar/
+public-data/_derived/lidar_rasters/

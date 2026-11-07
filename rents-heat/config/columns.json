@@ -1,0 +1,32 @@
+{
+  "_doc": "Canonical column name -> column name in the source file. Edit the right-hand side at 11:00 if the real headers differ.",
+  "input": {
+    "gnaf_id": "gnaf_id", "address": "address", "building_address": "building_address", "suburb": "suburb",
+    "mb": "mb", "latitude": "latitude", "longitude": "longitude", "property_type": "property_type",
+    "bedrooms": "bedrooms", "bathrooms": "bathrooms", "car_space": "car_space", "car_spaces": "car_spaces",
+    "floor_level": "floor_level", "flats_in_building": "flats_in_building",
+    "block_new_homes_2021_2026": "block_new_homes_2021_2026", "block_homes_2026": "block_homes_2026",
+    "ever_advertised_for_lease": "ever_advertised_for_lease", "first_ever_listed": "first_ever_listed",
+    "attrs_last_seen": "attrs_last_seen"
+  },
+  "input_date_columns": ["first_ever_listed", "attrs_last_seen"],
+  "input_no_date_value": "0001-01-01",
+  "past_leases": {
+    "_doc": "Real schema (2026-11-07): gnaf_id,address,building_address,suburb,mb,listing_date,weekly_rent,bedrooms,bathrooms,car_space,garage_spaces,property_type,was_leased,latitude,longitude",
+    "gnaf_id": "gnaf_id", "address": "address", "building_address": "building_address", "date": "listing_date",
+    "price": "weekly_rent", "bedrooms": "bedrooms", "bathrooms": "bathrooms", "car_spaces": "garage_spaces",
+    "leased": "was_leased"
+  },
+  "api_rent_history": {
+    "gnaf_id": "gnaf_pid", "address": "address", "date": "listing_date", "price": "weekly_rent",
+    "bedrooms": "bedrooms", "bathrooms": "bathrooms", "car_spaces": "car_spaces", "leased": "leased",
+    "lat": "lat", "lng": "lng", "property_type": "property_type"
+  },
+  "api_properties": {
+    "gnaf_id": "gnaf_pid", "address": "address", "mb": "mb", "lat": "lat", "lng": "lng",
+    "dwelling_type": "dwelling_type", "property_type": "property_type", "bedrooms": "bedrooms",
+    "bathrooms": "bathrooms", "car_spaces": "car_spaces", "floor": "floor", "level": "level",
+    "flats_in_building": "flats_in_building"
+  },
+  "output": ["gnaf_id", "rent_with_car_space", "rent_without_car_space"]
+}

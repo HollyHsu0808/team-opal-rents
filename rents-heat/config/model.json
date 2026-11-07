@@ -1,0 +1,19 @@
+{
+  "_doc": "Model settings fixed before looking at window A results (k is selected on A from k_grid).",
+  "episode_gap_days": 60,
+  "ladder_min_n": 10,
+  "ladder_lookback_months": 12,
+  "bed_cap": 4,
+  "premium_min_n": 10,
+  "premium_clip": [0.0, 0.35],
+  "comps_lookback_months": 36,
+  "k_grid": [0.5, 1, 2, 3, 5, 8, 13, 20],
+  "stale_grid_months": [24, 36, 60],
+  "stale_weights": [0.0, 0.5],
+  "snap_grid": [5, 10],
+  "index_smooth": 3.0,
+  "suburb_index_smooth": 3.0,
+  "suburb_index_ridge": 1.0,
+  "price_min": 80,
+  "price_max": 20000
+}

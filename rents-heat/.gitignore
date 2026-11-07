@@ -1,0 +1,10 @@
+# Organiser files, API output and keys never go in the repo (task rules)
+data_private/
+.env
+*.key
+# Large raw public downloads (re-fetch with src/publicdata/download.py)
+data_public/raw/
+.venv/
+__pycache__/
+*.pyc
+out/

@@ -1,0 +1,625 @@
+4399 buildings, 65777 flats, 30 suburbs(SA2), 1583 blocks(MB)
+calibration iter 0: base 520.0 -> M0 MedAE 115.0, median advert 810
+calibration iter 1: base 452.2 -> M0 MedAE 100.0, median advert 700
+world info (calibration world): {'n_flats': 65777, 'n_ads': 152153, 'n_stacks': 15077, 'floor_obs_share': 0.49603964911747267, 'scheme_share_flats': {'floorsuffix': 0.54, 'sequential': 0.396, 'letter': 0.063}, 'multiwing_flats': 0.1830122991319154, 'median_price': 700.0, 'linkable_share': 0.8013287319275735}
+seed 0 zero      noise 0.03: 25s, validated bld 195, floor_obs 0.50, shift -10
+seed 0 zero      noise 0.10: 23s, validated bld 195, floor_obs 0.50, shift -10
+seed 0 plausible noise 0.03: 24s, validated bld 196, floor_obs 0.50, shift -10
+seed 0 plausible noise 0.10: 24s, validated bld 196, floor_obs 0.50, shift -10
+seed 0 strong    noise 0.03: 23s, validated bld 195, floor_obs 0.50, shift -10
+seed 0 strong    noise 0.10: 24s, validated bld 195, floor_obs 0.50, shift -10
+seed 1 zero      noise 0.03: 24s, validated bld 181, floor_obs 0.49, shift 10
+seed 1 zero      noise 0.10: 23s, validated bld 181, floor_obs 0.49, shift 10
+seed 1 plausible noise 0.03: 24s, validated bld 181, floor_obs 0.49, shift 10
+seed 1 plausible noise 0.10: 24s, validated bld 181, floor_obs 0.49, shift 10
+seed 1 strong    noise 0.03: 23s, validated bld 182, floor_obs 0.49, shift 10
+seed 1 strong    noise 0.10: 23s, validated bld 182, floor_obs 0.49, shift 10
+seed 2 zero      noise 0.03: 23s, validated bld 177, floor_obs 0.50, shift -10
+seed 2 zero      noise 0.10: 23s, validated bld 177, floor_obs 0.50, shift -10
+seed 2 plausible noise 0.03: 23s, validated bld 178, floor_obs 0.50, shift -10
+seed 2 plausible noise 0.10: 24s, validated bld 178, floor_obs 0.50, shift -10
+seed 2 strong    noise 0.03: 23s, validated bld 174, floor_obs 0.50, shift 0
+seed 2 strong    noise 0.10: 23s, validated bld 174, floor_obs 0.50, shift -10
+                                                                         n   medae  within100    r2  coverage  d_medae
+scenario  block_noise rung               slice                                                                        
+zero      0.03        M0                 all                       1699.00   93.33       0.54  0.78       NaN      NaN
+                                         own_history               1189.00   93.33       0.54  0.77       NaN      NaN
+                                         no_history                 510.00   94.17       0.54  0.78       NaN      NaN
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85       NaN      NaN
+                      M1                 all                       1699.00   52.82       0.75  0.89      0.70   -40.51
+                                         own_history               1189.00   43.88       0.83  0.95      1.00   -49.45
+                                         no_history                 510.00   94.17       0.54  0.78      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85      0.00     0.00
+                      M2                 all                       1699.00   48.25       0.79  0.93      0.28    -4.57
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.28       0.68  0.89      0.93   -31.89
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85      0.00     0.00
+                      M3                 all                       1699.00   48.19       0.79  0.93      0.01    -0.06
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.12       0.68  0.89      0.02    -0.16
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85      0.00     0.00
+                      M3_nowing          all                       1699.00   48.23       0.79  0.93      0.01    -0.02
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.12       0.68  0.89      0.02    -0.16
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85      0.00     0.00
+                      G_base             all                       1699.00   47.90       0.79  0.93      0.30    -0.29
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.08       0.70  0.90      1.00    -0.04
+                                         no_history_no_bldg_comps    33.67   65.30       0.64  0.86      1.00   -18.87
+                      G_age              all                       1699.00   48.18       0.79  0.93      0.30     0.28
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   61.67       0.70  0.90      1.00    -0.41
+                                         no_history_no_bldg_comps    33.67   67.22       0.66  0.86      1.00     1.92
+                      G_view             all                       1699.00   48.31       0.79  0.93      0.30     0.41
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   61.88       0.70  0.90      1.00    -0.20
+                                         no_history_no_bldg_comps    33.67   69.03       0.65  0.85      1.00     3.73
+                      G_station          all                       1699.00   48.17       0.80  0.93      0.30     0.27
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.02       0.71  0.90      1.00    -0.06
+                                         no_history_no_bldg_comps    33.67   64.47       0.66  0.86      1.00    -0.83
+                      G_water            all                       1699.00   47.85       0.79  0.93      0.30    -0.05
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.20       0.70  0.90      1.00     0.12
+                                         no_history_no_bldg_comps    33.67   67.28       0.64  0.86      1.00     1.98
+                      G_heatcanopy       all                       1699.00   48.11       0.79  0.93      0.30     0.21
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.24       0.70  0.90      1.00     0.16
+                                         no_history_no_bldg_comps    33.67   65.96       0.64  0.85      1.00     0.66
+                      G_abs              all                       1699.00   47.95       0.79  0.93      0.30     0.05
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.28       0.70  0.90      1.00     0.20
+                                         no_history_no_bldg_comps    33.67   66.87       0.65  0.86      1.00     1.57
+                      G_all              all                       1699.00   48.36       0.79  0.93      0.30     0.46
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   61.90       0.70  0.89      1.00    -0.19
+                                         no_history_no_bldg_comps    33.67   69.22       0.64  0.84      1.00     3.92
+                      G_all_gate         all                       1699.00   48.25       0.79  0.93      0.04    -0.10
+                                         own_history               1189.00   43.41       0.83  0.95      0.05    -0.47
+                                         no_history                 510.00   61.90       0.70  0.89      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   69.22       0.64  0.84      0.00     0.00
+                      G_all_gate_calib   all                       1699.00   48.08       0.79  0.93       NaN    -0.17
+                                         own_history               1189.00   43.75       0.82  0.94       NaN     0.34
+                                         no_history                 510.00   62.71       0.71  0.89       NaN     0.81
+                                         no_history_no_bldg_comps    33.67   67.39       0.64  0.84       NaN    -1.83
+                      snap5              all                       1699.00   48.33       0.80  0.93       NaN     0.25
+                                         own_history               1189.00   43.33       0.83  0.94       NaN    -0.42
+                                         no_history                 510.00   63.33       0.71  0.89       NaN     0.63
+                                         no_history_no_bldg_comps    33.67   67.50       0.64  0.84       NaN     0.11
+                      snap10             all                       1699.00   48.33       0.80  0.93       NaN     0.25
+                                         own_history               1189.00   43.33       0.84  0.94       NaN    -0.42
+                                         no_history                 510.00   63.33       0.72  0.89       NaN     0.63
+                                         no_history_no_bldg_comps    33.67   67.50       0.64  0.84       NaN     0.11
+                      G_base_nomap       all                       1699.00   48.23       0.79  0.93      0.30     0.33
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   63.38       0.68  0.89      1.00     1.29
+                                         no_history_no_bldg_comps    33.67   92.43       0.54  0.82      1.00    27.13
+                      G_age_nomap        all                       1699.00   47.75       0.79  0.93      0.30    -0.47
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.50       0.69  0.89      1.00    -0.88
+                                         no_history_no_bldg_comps    33.67   92.31       0.51  0.81      1.00    -0.11
+                      G_view_nomap       all                       1699.00   48.15       0.79  0.93      0.30    -0.08
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   64.14       0.69  0.89      1.00     0.77
+                                         no_history_no_bldg_comps    33.67   92.09       0.52  0.81      1.00    -0.33
+                      G_station_nomap    all                       1699.00   48.53       0.79  0.93      0.30     0.30
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   64.37       0.69  0.89      1.00     0.99
+                                         no_history_no_bldg_comps    33.67   98.20       0.51  0.82      1.00     5.78
+                      G_water_nomap      all                       1699.00   48.33       0.79  0.93      0.30     0.10
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   63.09       0.69  0.89      1.00    -0.29
+                                         no_history_no_bldg_comps    33.67  101.05       0.50  0.81      1.00     8.63
+                      G_heatcanopy_nomap all                       1699.00   48.27       0.79  0.93      0.30     0.04
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.68       0.69  0.89      1.00    -0.69
+                                         no_history_no_bldg_comps    33.67   86.38       0.54  0.82      1.00    -6.04
+                      G_abs_nomap        all                       1699.00   48.42       0.79  0.93      0.30     0.19
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   63.62       0.69  0.89      1.00     0.24
+                                         no_history_no_bldg_comps    33.67   91.31       0.53  0.82      1.00    -1.12
+                      G_all_nomap        all                       1699.00   48.16       0.79  0.93      0.30    -0.07
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   63.33       0.69  0.89      1.00    -0.04
+                                         no_history_no_bldg_comps    33.67   90.10       0.50  0.81      1.00    -2.33
+          0.10        M0                 all                       1699.00   93.33       0.54  0.78       NaN      NaN
+                                         own_history               1189.00   93.33       0.54  0.77       NaN      NaN
+                                         no_history                 510.00   94.17       0.54  0.78       NaN      NaN
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85       NaN      NaN
+                      M1                 all                       1699.00   52.82       0.75  0.89      0.70   -40.51
+                                         own_history               1189.00   43.88       0.83  0.95      1.00   -49.45
+                                         no_history                 510.00   94.17       0.54  0.78      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85      0.00     0.00
+                      M2                 all                       1699.00   48.25       0.79  0.93      0.28    -4.57
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.28       0.68  0.89      0.93   -31.89
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85      0.00     0.00
+                      M3                 all                       1699.00   48.19       0.79  0.93      0.01    -0.06
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.12       0.68  0.89      0.02    -0.16
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85      0.00     0.00
+                      M3_nowing          all                       1699.00   48.23       0.79  0.93      0.01    -0.02
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.12       0.68  0.89      0.02    -0.16
+                                         no_history_no_bldg_comps    33.67   84.17       0.53  0.85      0.00     0.00
+                      G_base             all                       1699.00   48.34       0.79  0.93      0.30     0.15
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.35       0.69  0.89      1.00     0.23
+                                         no_history_no_bldg_comps    33.67   78.77       0.60  0.83      1.00    -5.40
+                      G_age              all                       1699.00   48.49       0.79  0.93      0.30     0.16
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   61.70       0.70  0.89      1.00    -0.65
+                                         no_history_no_bldg_comps    33.67   79.22       0.59  0.84      1.00     0.45
+                      G_view             all                       1699.00   48.34       0.79  0.93      0.30     0.00
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.72       0.70  0.89      1.00     0.37
+                                         no_history_no_bldg_comps    33.67   82.65       0.58  0.82      1.00     3.88
+                      G_station          all                       1699.00   48.43       0.79  0.93      0.30     0.10
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.81       0.70  0.89      1.00     0.46
+                                         no_history_no_bldg_comps    33.67   81.45       0.61  0.84      1.00     2.68
+                      G_water            all                       1699.00   48.47       0.79  0.93      0.30     0.13
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   61.58       0.69  0.89      1.00    -0.77
+                                         no_history_no_bldg_comps    33.67   83.41       0.60  0.83      1.00     4.64
+                      G_heatcanopy       all                       1699.00   48.13       0.79  0.93      0.30    -0.21
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   61.05       0.70  0.89      1.00    -1.31
+                                         no_history_no_bldg_comps    33.67   79.93       0.58  0.83      1.00     1.16
+                      G_abs              all                       1699.00   48.30       0.79  0.93      0.30    -0.03
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   64.18       0.69  0.89      1.00     1.83
+                                         no_history_no_bldg_comps    33.67   76.95       0.61  0.83      1.00    -1.82
+                      G_all              all                       1699.00   47.98       0.79  0.93      0.30    -0.35
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   60.79       0.70  0.89      1.00    -1.57
+                                         no_history_no_bldg_comps    33.67   85.47       0.57  0.83      1.00     6.70
+                      G_all_gate         all                       1699.00   47.81       0.79  0.93      0.04    -0.17
+                                         own_history               1189.00   43.41       0.83  0.95      0.05    -0.47
+                                         no_history                 510.00   60.79       0.70  0.89      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   85.47       0.57  0.83      0.00     0.00
+                      G_all_gate_calib   all                       1699.00   48.05       0.78  0.93       NaN     0.24
+                                         own_history               1189.00   43.75       0.82  0.94       NaN     0.34
+                                         no_history                 510.00   62.04       0.69  0.89       NaN     1.25
+                                         no_history_no_bldg_comps    33.67   90.35       0.56  0.83       NaN     4.87
+                      snap5              all                       1699.00   48.33       0.79  0.93       NaN     0.28
+                                         own_history               1189.00   43.33       0.83  0.94       NaN    -0.42
+                                         no_history                 510.00   61.67       0.70  0.89       NaN    -0.37
+                                         no_history_no_bldg_comps    33.67   90.00       0.56  0.83       NaN    -0.35
+                      snap10             all                       1699.00   48.33       0.80  0.93       NaN     0.28
+                                         own_history               1189.00   43.33       0.84  0.94       NaN    -0.42
+                                         no_history                 510.00   60.83       0.71  0.89       NaN    -1.20
+                                         no_history_no_bldg_comps    33.67   92.50       0.56  0.83       NaN     2.15
+                      G_base_nomap       all                       1699.00   48.23       0.79  0.93      0.30    -0.11
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   63.38       0.68  0.89      1.00     1.02
+                                         no_history_no_bldg_comps    33.67   92.43       0.54  0.82      1.00    13.65
+                      G_age_nomap        all                       1699.00   47.75       0.79  0.93      0.30    -0.47
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.50       0.69  0.89      1.00    -0.88
+                                         no_history_no_bldg_comps    33.67   92.31       0.51  0.81      1.00    -0.11
+                      G_view_nomap       all                       1699.00   48.15       0.79  0.93      0.30    -0.08
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   64.14       0.69  0.89      1.00     0.77
+                                         no_history_no_bldg_comps    33.67   92.09       0.52  0.81      1.00    -0.33
+                      G_station_nomap    all                       1699.00   48.53       0.79  0.93      0.30     0.30
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   64.37       0.69  0.89      1.00     0.99
+                                         no_history_no_bldg_comps    33.67   98.20       0.51  0.82      1.00     5.78
+                      G_water_nomap      all                       1699.00   48.33       0.79  0.93      0.30     0.10
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   63.09       0.69  0.89      1.00    -0.29
+                                         no_history_no_bldg_comps    33.67  101.05       0.50  0.81      1.00     8.63
+                      G_heatcanopy_nomap all                       1699.00   48.27       0.79  0.93      0.30     0.04
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   62.68       0.69  0.89      1.00    -0.69
+                                         no_history_no_bldg_comps    33.67   86.38       0.54  0.82      1.00    -6.04
+                      G_abs_nomap        all                       1699.00   48.42       0.79  0.93      0.30     0.19
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   63.62       0.69  0.89      1.00     0.24
+                                         no_history_no_bldg_comps    33.67   91.31       0.53  0.82      1.00    -1.12
+                      G_all_nomap        all                       1699.00   48.16       0.79  0.93      0.30    -0.07
+                                         own_history               1189.00   43.88       0.83  0.95      0.00     0.00
+                                         no_history                 510.00   63.33       0.69  0.89      1.00    -0.04
+                                         no_history_no_bldg_comps    33.67   90.10       0.50  0.81      1.00    -2.33
+plausible 0.03        M0                 all                       1699.00   90.00       0.54  0.77       NaN      NaN
+                                         own_history               1189.00   90.00       0.54  0.77       NaN      NaN
+                                         no_history                 510.00   94.17       0.54  0.77       NaN      NaN
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83       NaN      NaN
+                      M1                 all                       1699.00   53.40       0.75  0.89      0.70   -36.60
+                                         own_history               1189.00   42.96       0.84  0.95      1.00   -47.04
+                                         no_history                 510.00   94.17       0.54  0.77      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83      0.00     0.00
+                      M2                 all                       1699.00   47.55       0.79  0.93      0.28    -5.86
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.98       0.68  0.89      0.93   -31.18
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83      0.00     0.00
+                      M3                 all                       1699.00   47.47       0.79  0.93      0.01    -0.07
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.73       0.68  0.89      0.02    -0.26
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83      0.00     0.00
+                      M3_nowing          all                       1699.00   47.49       0.79  0.93      0.01    -0.06
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.73       0.68  0.89      0.02    -0.26
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83      0.00     0.00
+                      G_base             all                       1699.00   46.98       0.80  0.93      0.30    -0.49
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.35       0.70  0.90      1.00    -1.37
+                                         no_history_no_bldg_comps    33.67   71.02       0.66  0.86      1.00   -22.31
+                      G_age              all                       1699.00   47.03       0.80  0.93      0.30     0.05
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   60.89       0.70  0.90      1.00    -0.47
+                                         no_history_no_bldg_comps    33.67   59.99       0.64  0.86      1.00   -11.03
+                      G_view             all                       1699.00   47.37       0.80  0.93      0.30     0.39
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   60.60       0.71  0.90      1.00    -0.75
+                                         no_history_no_bldg_comps    33.67   68.44       0.66  0.85      1.00    -2.58
+                      G_station          all                       1699.00   46.87       0.80  0.93      0.30    -0.11
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   60.63       0.70  0.90      1.00    -0.73
+                                         no_history_no_bldg_comps    33.67   60.60       0.68  0.86      1.00   -10.42
+                      G_water            all                       1699.00   47.14       0.80  0.93      0.30     0.16
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.73       0.70  0.90      1.00     0.38
+                                         no_history_no_bldg_comps    33.67   66.96       0.67  0.86      1.00    -4.06
+                      G_heatcanopy       all                       1699.00   46.81       0.80  0.93      0.30    -0.17
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   60.55       0.70  0.90      1.00    -0.80
+                                         no_history_no_bldg_comps    33.67   67.44       0.65  0.85      1.00    -3.58
+                      G_abs              all                       1699.00   46.97       0.80  0.93      0.30    -0.01
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.40       0.70  0.90      1.00     1.04
+                                         no_history_no_bldg_comps    33.67   71.10       0.65  0.85      1.00     0.08
+                      G_all              all                       1699.00   47.11       0.80  0.93      0.30     0.13
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.81       0.70  0.90      1.00     0.46
+                                         no_history_no_bldg_comps    33.67   73.90       0.61  0.84      1.00     2.88
+                      G_all_gate         all                       1699.00   46.84       0.79  0.93      0.04    -0.27
+                                         own_history               1189.00   42.90       0.83  0.95      0.05    -0.07
+                                         no_history                 510.00   61.81       0.70  0.90      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   73.90       0.61  0.84      0.00     0.00
+                      G_all_gate_calib   all                       1699.00   48.25       0.79  0.93       NaN     1.41
+                                         own_history               1189.00   43.49       0.83  0.95       NaN     0.59
+                                         no_history                 510.00   63.54       0.71  0.89       NaN     1.73
+                                         no_history_no_bldg_comps    33.67   73.71       0.62  0.84       NaN    -0.19
+                      snap5              all                       1699.00   48.33       0.80  0.93       NaN     0.09
+                                         own_history               1189.00   43.33       0.84  0.95       NaN    -0.16
+                                         no_history                 510.00   65.00       0.72  0.89       NaN     1.46
+                                         no_history_no_bldg_comps    33.67   75.00       0.64  0.84       NaN     1.29
+                      snap10             all                       1699.00   48.33       0.81  0.93       NaN     0.09
+                                         own_history               1189.00   41.67       0.84  0.95       NaN    -1.82
+                                         no_history                 510.00   65.00       0.72  0.89       NaN     1.46
+                                         no_history_no_bldg_comps    33.67   72.50       0.66  0.84       NaN    -1.21
+                      G_base_nomap       all                       1699.00   47.21       0.79  0.93      0.30     0.22
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   63.26       0.68  0.89      1.00     1.91
+                                         no_history_no_bldg_comps    33.67   84.43       0.54  0.79      1.00    13.40
+                      G_age_nomap        all                       1699.00   47.25       0.79  0.93      0.30     0.05
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.14       0.69  0.89      1.00    -1.12
+                                         no_history_no_bldg_comps    33.67   89.97       0.55  0.81      1.00     5.54
+                      G_view_nomap       all                       1699.00   47.25       0.79  0.93      0.30     0.05
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.81       0.68  0.89      1.00    -1.45
+                                         no_history_no_bldg_comps    33.67   88.22       0.55  0.80      1.00     3.79
+                      G_station_nomap    all                       1699.00   47.51       0.79  0.93      0.30     0.30
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.63       0.68  0.89      1.00    -1.64
+                                         no_history_no_bldg_comps    33.67   95.89       0.50  0.80      1.00    11.46
+                      G_water_nomap      all                       1699.00   47.72       0.79  0.93      0.30     0.51
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.27       0.68  0.89      1.00    -0.99
+                                         no_history_no_bldg_comps    33.67   96.82       0.49  0.79      1.00    12.40
+                      G_heatcanopy_nomap all                       1699.00   47.10       0.79  0.93      0.30    -0.10
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.45       0.69  0.89      1.00    -1.81
+                                         no_history_no_bldg_comps    33.67   82.32       0.56  0.81      1.00    -2.10
+                      G_abs_nomap        all                       1699.00   47.09       0.79  0.93      0.30    -0.11
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.39       0.67  0.89      1.00    -1.88
+                                         no_history_no_bldg_comps    33.67   82.85       0.54  0.80      1.00    -1.58
+                      G_all_nomap        all                       1699.00   47.39       0.79  0.93      0.30     0.19
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.57       0.69  0.89      1.00    -0.69
+                                         no_history_no_bldg_comps    33.67   91.14       0.54  0.79      1.00     6.71
+          0.10        M0                 all                       1699.00   90.00       0.54  0.77       NaN      NaN
+                                         own_history               1189.00   90.00       0.54  0.77       NaN      NaN
+                                         no_history                 510.00   94.17       0.54  0.77       NaN      NaN
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83       NaN      NaN
+                      M1                 all                       1699.00   53.40       0.75  0.89      0.70   -36.60
+                                         own_history               1189.00   42.96       0.84  0.95      1.00   -47.04
+                                         no_history                 510.00   94.17       0.54  0.77      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83      0.00     0.00
+                      M2                 all                       1699.00   47.55       0.79  0.93      0.28    -5.86
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.98       0.68  0.89      0.93   -31.18
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83      0.00     0.00
+                      M3                 all                       1699.00   47.47       0.79  0.93      0.01    -0.07
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.73       0.68  0.89      0.02    -0.26
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83      0.00     0.00
+                      M3_nowing          all                       1699.00   47.49       0.79  0.93      0.01    -0.06
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.73       0.68  0.89      0.02    -0.26
+                                         no_history_no_bldg_comps    33.67   93.33       0.55  0.83      0.00     0.00
+                      G_base             all                       1699.00   46.82       0.80  0.93      0.30    -0.65
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.89       0.70  0.89      1.00    -0.84
+                                         no_history_no_bldg_comps    33.67   68.50       0.60  0.82      1.00   -24.83
+                      G_age              all                       1699.00   47.52       0.80  0.93      0.30     0.70
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.03       0.69  0.89      1.00     0.14
+                                         no_history_no_bldg_comps    33.67   75.74       0.59  0.83      1.00     7.23
+                      G_view             all                       1699.00   47.24       0.79  0.93      0.30     0.42
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.43       0.69  0.89      1.00    -0.46
+                                         no_history_no_bldg_comps    33.67   78.93       0.63  0.81      1.00    10.43
+                      G_station          all                       1699.00   47.06       0.79  0.93      0.30     0.24
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.70       0.69  0.89      1.00     0.81
+                                         no_history_no_bldg_comps    33.67   76.49       0.59  0.82      1.00     7.99
+                      G_water            all                       1699.00   47.17       0.79  0.93      0.30     0.35
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.07       0.69  0.89      1.00     0.18
+                                         no_history_no_bldg_comps    33.67   80.10       0.62  0.82      1.00    11.59
+                      G_heatcanopy       all                       1699.00   47.14       0.80  0.93      0.30     0.32
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.20       0.69  0.89      1.00     0.31
+                                         no_history_no_bldg_comps    33.67   80.17       0.59  0.81      1.00    11.67
+                      G_abs              all                       1699.00   47.43       0.79  0.93      0.30     0.61
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.32       0.69  0.89      1.00     0.43
+                                         no_history_no_bldg_comps    33.67   70.73       0.59  0.81      1.00     2.23
+                      G_all              all                       1699.00   47.35       0.79  0.93      0.30     0.53
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.97       0.69  0.89      1.00     0.08
+                                         no_history_no_bldg_comps    33.67   78.06       0.58  0.81      1.00     9.55
+                      G_all_gate         all                       1699.00   47.19       0.79  0.93      0.04    -0.17
+                                         own_history               1189.00   42.90       0.83  0.95      0.05    -0.07
+                                         no_history                 510.00   61.97       0.69  0.89      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   78.06       0.58  0.81      0.00     0.00
+                      G_all_gate_calib   all                       1699.00   48.30       0.79  0.93       NaN     1.12
+                                         own_history               1189.00   43.49       0.83  0.95       NaN     0.59
+                                         no_history                 510.00   61.89       0.70  0.89       NaN    -0.08
+                                         no_history_no_bldg_comps    33.67   85.19       0.55  0.81       NaN     7.14
+                      snap5              all                       1699.00   48.33       0.80  0.93       NaN     0.03
+                                         own_history               1189.00   43.33       0.84  0.95       NaN    -0.16
+                                         no_history                 510.00   61.67       0.71  0.89       NaN    -0.23
+                                         no_history_no_bldg_comps    33.67   84.17       0.56  0.81       NaN    -1.02
+                      snap10             all                       1699.00   50.00       0.80  0.93       NaN     1.70
+                                         own_history               1189.00   41.67       0.84  0.95       NaN    -1.82
+                                         no_history                 510.00   62.50       0.71  0.89       NaN     0.61
+                                         no_history_no_bldg_comps    33.67   85.83       0.58  0.81       NaN     0.64
+                      G_base_nomap       all                       1699.00   47.21       0.79  0.93      0.30     0.39
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   63.26       0.68  0.89      1.00     1.37
+                                         no_history_no_bldg_comps    33.67   84.43       0.54  0.79      1.00    15.92
+                      G_age_nomap        all                       1699.00   47.25       0.79  0.93      0.30     0.05
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.14       0.69  0.89      1.00    -1.12
+                                         no_history_no_bldg_comps    33.67   89.97       0.55  0.81      1.00     5.54
+                      G_view_nomap       all                       1699.00   47.25       0.79  0.93      0.30     0.05
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.81       0.68  0.89      1.00    -1.45
+                                         no_history_no_bldg_comps    33.67   88.22       0.55  0.80      1.00     3.79
+                      G_station_nomap    all                       1699.00   47.51       0.79  0.93      0.30     0.30
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.63       0.68  0.89      1.00    -1.64
+                                         no_history_no_bldg_comps    33.67   95.89       0.50  0.80      1.00    11.46
+                      G_water_nomap      all                       1699.00   47.72       0.79  0.93      0.30     0.51
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.27       0.68  0.89      1.00    -0.99
+                                         no_history_no_bldg_comps    33.67   96.82       0.49  0.79      1.00    12.40
+                      G_heatcanopy_nomap all                       1699.00   47.10       0.79  0.93      0.30    -0.10
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.45       0.69  0.89      1.00    -1.81
+                                         no_history_no_bldg_comps    33.67   82.32       0.56  0.81      1.00    -2.10
+                      G_abs_nomap        all                       1699.00   47.09       0.79  0.93      0.30    -0.11
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   61.39       0.67  0.89      1.00    -1.88
+                                         no_history_no_bldg_comps    33.67   82.85       0.54  0.80      1.00    -1.58
+                      G_all_nomap        all                       1699.00   47.39       0.79  0.93      0.30     0.19
+                                         own_history               1189.00   42.96       0.84  0.95      0.00     0.00
+                                         no_history                 510.00   62.57       0.69  0.89      1.00    -0.69
+                                         no_history_no_bldg_comps    33.67   91.14       0.54  0.79      1.00     6.71
+strong    0.03        M0                 all                       1699.00  105.00       0.49  0.71       NaN      NaN
+                                         own_history               1189.00  105.00       0.50  0.71       NaN      NaN
+                                         no_history                 510.00  106.67       0.49  0.70       NaN      NaN
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78       NaN      NaN
+                      M1                 all                       1699.00   51.03       0.74  0.87      0.70   -53.97
+                                         own_history               1189.00   40.99       0.85  0.95      1.00   -64.01
+                                         no_history                 510.00  106.67       0.49  0.70      0.00     0.00
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78      0.00     0.00
+                      M2                 all                       1699.00   45.49       0.80  0.93      0.28    -5.54
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.92       0.68  0.89      0.93   -43.74
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78      0.00     0.00
+                      M3                 all                       1699.00   45.43       0.80  0.93      0.01    -0.05
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.33       0.68  0.89      0.02    -0.59
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78      0.00     0.00
+                      M3_nowing          all                       1699.00   45.48       0.80  0.93      0.01    -0.01
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.33       0.68  0.89      0.02    -0.59
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78      0.00     0.00
+                      G_base             all                       1699.00   45.53       0.80  0.94      0.30     0.09
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   61.34       0.70  0.90      1.00    -1.00
+                                         no_history_no_bldg_comps    33.67   76.47       0.62  0.81      1.00   -32.69
+                      G_age              all                       1699.00   45.40       0.80  0.94      0.30    -0.13
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.23       0.70  0.90      1.00     0.89
+                                         no_history_no_bldg_comps    33.67   74.87       0.63  0.82      1.00    -1.60
+                      G_view             all                       1699.00   45.20       0.80  0.94      0.30    -0.32
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   60.83       0.70  0.90      1.00    -0.51
+                                         no_history_no_bldg_comps    33.67   67.60       0.63  0.80      1.00    -8.87
+                      G_station          all                       1699.00   45.40       0.80  0.94      0.30    -0.13
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   61.64       0.70  0.90      1.00     0.30
+                                         no_history_no_bldg_comps    33.67   70.52       0.62  0.81      1.00    -5.95
+                      G_water            all                       1699.00   45.59       0.80  0.94      0.30     0.06
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.50       0.71  0.90      1.00     1.17
+                                         no_history_no_bldg_comps    33.67   77.03       0.61  0.81      1.00     0.55
+                      G_heatcanopy       all                       1699.00   45.30       0.80  0.94      0.30    -0.23
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.27       0.71  0.90      1.00     0.93
+                                         no_history_no_bldg_comps    33.67   79.70       0.65  0.82      1.00     3.22
+                      G_abs              all                       1699.00   45.15       0.80  0.94      0.30    -0.38
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.59       0.70  0.90      1.00     1.25
+                                         no_history_no_bldg_comps    33.67   83.04       0.58  0.80      1.00     6.57
+                      G_all              all                       1699.00   45.64       0.80  0.94      0.30     0.12
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   61.79       0.70  0.90      1.00     0.45
+                                         no_history_no_bldg_comps    33.67   77.65       0.61  0.81      1.00     1.17
+                      G_all_gate         all                       1699.00   45.60       0.80  0.93      0.04    -0.05
+                                         own_history               1189.00   40.91       0.84  0.95      0.05    -0.09
+                                         no_history                 510.00   61.79       0.70  0.90      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   77.65       0.61  0.81      0.00     0.00
+                      G_all_gate_calib   all                       1699.00   46.54       0.79  0.93       NaN     0.94
+                                         own_history               1189.00   40.83       0.84  0.95       NaN    -0.07
+                                         no_history                 510.00   62.64       0.70  0.90       NaN     0.86
+                                         no_history_no_bldg_comps    33.67   77.51       0.62  0.81       NaN    -0.14
+                      snap5              all                       1699.00   46.67       0.80  0.93       NaN     0.13
+                                         own_history               1189.00   40.00       0.84  0.95       NaN    -0.83
+                                         no_history                 510.00   63.33       0.70  0.90       NaN     0.69
+                                         no_history_no_bldg_comps    33.67   78.33       0.62  0.81       NaN     0.82
+                      snap10             all                       1699.00   48.33       0.81  0.93       NaN     1.79
+                                         own_history               1189.00   40.00       0.85  0.95       NaN    -0.83
+                                         no_history                 510.00   61.67       0.71  0.90       NaN    -0.98
+                                         no_history_no_bldg_comps    33.67   75.83       0.62  0.81       NaN    -1.68
+                      G_base_nomap       all                       1699.00   45.65       0.80  0.93      0.30     0.12
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.68       0.69  0.89      1.00     1.35
+                                         no_history_no_bldg_comps    33.67  100.62       0.52  0.72      1.00    24.14
+                      G_age_nomap        all                       1699.00   45.59       0.80  0.93      0.30    -0.06
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.21       0.69  0.89      1.00    -0.48
+                                         no_history_no_bldg_comps    33.67   96.02       0.52  0.76      1.00    -4.60
+                      G_view_nomap       all                       1699.00   45.70       0.80  0.93      0.30     0.05
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.11       0.69  0.89      1.00    -0.58
+                                         no_history_no_bldg_comps    33.67  100.91       0.49  0.72      1.00     0.30
+                      G_station_nomap    all                       1699.00   45.51       0.80  0.93      0.30    -0.14
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.06       0.69  0.89      1.00    -0.63
+                                         no_history_no_bldg_comps    33.67   97.42       0.53  0.73      1.00    -3.20
+                      G_water_nomap      all                       1699.00   45.69       0.80  0.93      0.30     0.03
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   63.54       0.68  0.89      1.00     0.85
+                                         no_history_no_bldg_comps    33.67  100.55       0.47  0.73      1.00    -0.07
+                      G_heatcanopy_nomap all                       1699.00   45.67       0.80  0.93      0.30     0.02
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.07       0.70  0.89      1.00    -0.62
+                                         no_history_no_bldg_comps    33.67   98.43       0.52  0.73      1.00    -2.19
+                      G_abs_nomap        all                       1699.00   45.52       0.80  0.93      0.30    -0.13
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.45       0.69  0.89      1.00    -0.24
+                                         no_history_no_bldg_comps    33.67   94.04       0.53  0.72      1.00    -6.57
+                      G_all_nomap        all                       1699.00   45.74       0.80  0.93      0.30     0.09
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.45       0.69  0.90      1.00    -0.23
+                                         no_history_no_bldg_comps    33.67   92.57       0.52  0.77      1.00    -8.05
+          0.10        M0                 all                       1699.00  105.00       0.49  0.71       NaN      NaN
+                                         own_history               1189.00  105.00       0.50  0.71       NaN      NaN
+                                         no_history                 510.00  106.67       0.49  0.70       NaN      NaN
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78       NaN      NaN
+                      M1                 all                       1699.00   51.03       0.74  0.87      0.70   -53.97
+                                         own_history               1189.00   40.99       0.85  0.95      1.00   -64.01
+                                         no_history                 510.00  106.67       0.49  0.70      0.00     0.00
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78      0.00     0.00
+                      M2                 all                       1699.00   45.49       0.80  0.93      0.28    -5.54
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.92       0.68  0.89      0.93   -43.74
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78      0.00     0.00
+                      M3                 all                       1699.00   45.43       0.80  0.93      0.01    -0.05
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.33       0.68  0.89      0.02    -0.59
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78      0.00     0.00
+                      M3_nowing          all                       1699.00   45.48       0.80  0.93      0.01    -0.01
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.33       0.68  0.89      0.02    -0.59
+                                         no_history_no_bldg_comps    33.67  109.17       0.49  0.78      0.00     0.00
+                      G_base             all                       1699.00   45.48       0.80  0.93      0.30     0.05
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.57       0.70  0.90      1.00     0.24
+                                         no_history_no_bldg_comps    33.67   82.69       0.61  0.78      1.00   -26.48
+                      G_age              all                       1699.00   45.50       0.80  0.94      0.30     0.02
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   61.70       0.70  0.90      1.00    -0.87
+                                         no_history_no_bldg_comps    33.67   76.21       0.63  0.81      1.00    -6.47
+                      G_view             all                       1699.00   45.83       0.80  0.94      0.30     0.35
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   61.65       0.69  0.90      1.00    -0.92
+                                         no_history_no_bldg_comps    33.67   81.86       0.59  0.78      1.00    -0.83
+                      G_station          all                       1699.00   45.41       0.80  0.93      0.30    -0.07
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.72       0.70  0.90      1.00     0.14
+                                         no_history_no_bldg_comps    33.67   84.96       0.59  0.78      1.00     2.27
+                      G_water            all                       1699.00   45.49       0.80  0.93      0.30     0.01
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.64       0.69  0.89      1.00     0.06
+                                         no_history_no_bldg_comps    33.67   88.56       0.58  0.77      1.00     5.87
+                      G_heatcanopy       all                       1699.00   45.53       0.80  0.94      0.30     0.05
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   61.62       0.70  0.90      1.00    -0.96
+                                         no_history_no_bldg_comps    33.67   85.63       0.58  0.78      1.00     2.94
+                      G_abs              all                       1699.00   45.35       0.80  0.93      0.30    -0.13
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.10       0.70  0.89      1.00    -0.47
+                                         no_history_no_bldg_comps    33.67   84.18       0.62  0.76      1.00     1.49
+                      G_all              all                       1699.00   45.52       0.80  0.94      0.30     0.04
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.91       0.69  0.90      1.00     0.33
+                                         no_history_no_bldg_comps    33.67   82.42       0.58  0.80      1.00    -0.27
+                      G_all_gate         all                       1699.00   45.48       0.80  0.93      0.04    -0.04
+                                         own_history               1189.00   40.91       0.84  0.95      0.05    -0.09
+                                         no_history                 510.00   62.91       0.69  0.90      0.00     0.00
+                                         no_history_no_bldg_comps    33.67   82.42       0.58  0.80      0.00     0.00
+                      G_all_gate_calib   all                       1699.00   46.26       0.79  0.93       NaN     0.78
+                                         own_history               1189.00   41.39       0.84  0.95       NaN     0.49
+                                         no_history                 510.00   61.85       0.70  0.90       NaN    -1.06
+                                         no_history_no_bldg_comps    33.67   83.67       0.60  0.79       NaN     1.25
+                      snap5              all                       1699.00   45.00       0.80  0.93       NaN    -1.26
+                                         own_history               1189.00   40.00       0.84  0.95       NaN    -1.39
+                                         no_history                 510.00   61.67       0.70  0.90       NaN    -0.18
+                                         no_history_no_bldg_comps    33.67   84.17       0.61  0.79       NaN     0.50
+                      snap10             all                       1699.00   48.33       0.81  0.93       NaN     2.07
+                                         own_history               1189.00   40.00       0.85  0.95       NaN    -1.39
+                                         no_history                 510.00   61.67       0.71  0.90       NaN    -0.18
+                                         no_history_no_bldg_comps    33.67   83.33       0.61  0.79       NaN    -0.34
+                      G_base_nomap       all                       1699.00   45.65       0.80  0.93      0.30     0.17
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.68       0.69  0.89      1.00     0.11
+                                         no_history_no_bldg_comps    33.67  100.62       0.52  0.72      1.00    17.93
+                      G_age_nomap        all                       1699.00   45.59       0.80  0.93      0.30    -0.06
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.21       0.69  0.89      1.00    -0.48
+                                         no_history_no_bldg_comps    33.67   96.02       0.52  0.76      1.00    -4.60
+                      G_view_nomap       all                       1699.00   45.70       0.80  0.93      0.30     0.05
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.11       0.69  0.89      1.00    -0.58
+                                         no_history_no_bldg_comps    33.67  100.91       0.49  0.72      1.00     0.30
+                      G_station_nomap    all                       1699.00   45.51       0.80  0.93      0.30    -0.14
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.06       0.69  0.89      1.00    -0.63
+                                         no_history_no_bldg_comps    33.67   97.42       0.53  0.73      1.00    -3.20
+                      G_water_nomap      all                       1699.00   45.69       0.80  0.93      0.30     0.03
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   63.54       0.68  0.89      1.00     0.85
+                                         no_history_no_bldg_comps    33.67  100.55       0.47  0.73      1.00    -0.07
+                      G_heatcanopy_nomap all                       1699.00   45.67       0.80  0.93      0.30     0.02
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.07       0.70  0.89      1.00    -0.62
+                                         no_history_no_bldg_comps    33.67   98.43       0.52  0.73      1.00    -2.19
+                      G_abs_nomap        all                       1699.00   45.52       0.80  0.93      0.30    -0.13
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.45       0.69  0.89      1.00    -0.24
+                                         no_history_no_bldg_comps    33.67   94.04       0.53  0.72      1.00    -6.57
+                      G_all_nomap        all                       1699.00   45.74       0.80  0.93      0.30     0.09
+                                         own_history               1189.00   40.99       0.85  0.95      0.00     0.00
+                                         no_history                 510.00   62.45       0.69  0.90      1.00    -0.23
+                                         no_history_no_bldg_comps    33.67   92.57       0.52  0.77      1.00    -8.05
+total 425s

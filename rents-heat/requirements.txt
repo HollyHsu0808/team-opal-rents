@@ -1,0 +1,13 @@
+# rents pipeline (src/rents, synthetic, run_all.py, tests). Versions = those in .venv on 2026-11-07.
+pandas>=3.0
+numpy>=2.0
+pyarrow>=20
+scipy>=1.14
+requests>=2.32
+# public_features.py (optional ablation) - also in requirements-geo.txt
+geopandas>=1.0
+shapely>=2.0
+pyproj>=3.6
+rasterio>=1.4
+# tests
+pytest>=8

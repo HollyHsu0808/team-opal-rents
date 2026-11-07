@@ -1,0 +1,16 @@
+,pct_non_null_all,pct_non_null_apt
+footprint_m2,100.0,100.0
+levels,79.9,71.5
+neighbour_max_levels_100m,94.1,91.9
+sp_plannumber,63.2,69.0
+sp_createdate,63.2,69.0
+n_sp_plans,100.0,100.0
+dist_station_m,100.0,100.0
+dist_rail_metro_m,100.0,100.0
+dist_water_m,100.0,100.0
+lst_c,100.0,100.0
+canopy_mmb_pct,99.7,99.9
+uhi16_mmb,100.0,100.0
+lst_sa1_hvi,98.9,99.0
+abs_sa2_median_rent_2021,98.9,99.0
+n_sp_plans>=2 (multi-plan share),7.069788588315526,7.734450531743474

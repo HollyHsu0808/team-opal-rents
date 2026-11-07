@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Team-Opal — Task 4 rents</title>
+<style>
+@page { size: 1280px 720px; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; }
+body { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1c2733; }
+.slide { width: 1280px; height: 720px; padding: 56px 72px; position: relative; page-break-after: always; overflow: hidden; }
+.slide:last-child { page-break-after: auto; }
+h1 { font-size: 52px; line-height: 1.12; margin: 0 0 18px; letter-spacing: -0.5px; }
+h2 { font-size: 38px; margin: 0 0 22px; letter-spacing: -0.3px; }
+.kicker { font-size: 18px; text-transform: uppercase; letter-spacing: 2px; color: #3b82c4; font-weight: 600; margin-bottom: 14px; }
+p, li { font-size: 22px; line-height: 1.45; }
+ul { margin: 6px 0 0 0; padding-left: 26px; }
+li { margin: 8px 0; }
+.foot { position: absolute; left: 72px; right: 72px; bottom: 26px; font-size: 14px; color: #7a8794; display: flex; justify-content: space-between; }
+.big { font-size: 112px; font-weight: 700; color: #1f6fb2; line-height: 1; }
+.tiles { display: flex; gap: 22px; margin-top: 26px; }
+.tile { flex: 1; background: #f2f6fa; border-radius: 14px; padding: 20px 22px; }
+.tile b { display: block; font-size: 40px; color: #1f6fb2; margin-bottom: 4px; }
+.tile span { font-size: 18px; color: #3d4b59; display: block; }
+.tile strong { font-weight: 700; color: #1c2733; }
+.cols { display: flex; gap: 44px; }
+.col { flex: 1; }
+table { border-collapse: collapse; width: 100%; font-size: 19px; }
+th, td { padding: 7px 10px; border-bottom: 1px solid #e3e8ee; text-align: left; }
+th { background: #f2f6fa; font-weight: 600; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.hl { background: #fff4e0; }
+.muted { color: #6b7886; }
+.step { display: flex; gap: 18px; align-items: flex-start; margin: 14px 0; }
+.num { flex: 0 0 46px; height: 46px; border-radius: 23px; background: #1f6fb2; color: #fff; font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.step p { margin: 0; }
+.note { font-size: 16px; color: #6b7886; margin-top: 14px; }
+.box { background: #f7f9fc; border-left: 5px solid #3b82c4; padding: 14px 20px; border-radius: 4px; }
+</style></head><body>
+
+<!-- 1 -->
+<section class="slide">
+  <div class="kicker">Microburbs hackathon · Task 4 · Team-Opal</div>
+  <h1>Would you let one flat<br>vote ten times?</h1>
+  <p style="font-size:26px;max-width:960px">We price every City of Sydney flat from <b>its own past rent</b> and from <b>its neighbours in the same building</b> — one flat, one vote — and we only trust evidence that is still fresh.</p>
+  <div class="tiles">
+    <div class="tile"><b>$45</b><span>typical miss on 2,898 held-out adverts (Jun–Jul 2026)</span></div>
+    <div class="tile"><b>77%</b><span>within $100 a week</span></div>
+    <div class="tile"><b>0.88</b><span>R² on the same held-out adverts</span></div>
+    <div class="tile"><b>65,777</b><span>flats priced, with and without a car space</span></div>
+  </div>
+  <p class="note">Reference points published by the organisers (1,699 Aug–Sep adverts): simple estimate $100, with parking $93, Microburbs rental valuation $86 (55% within $100). Different test adverts — the official score comes from Aug–Sep.</p>
+  <div class="foot"><span>Trained only on adverts dated ≤ cut-off; validated by date, never at random</span><span>1</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="kicker">The problem</div>
+  <h2>Same building. Same bedrooms. Up to $500 apart.</h2>
+  <div class="cols">
+    <div class="col">
+      <p>45 Shelley St, Sydney — one-bedroom flats, latest advert since 2025:</p>
+      <table>
+        <tr><th>floor</th><th class="n">water visible (share of directions)</th><th class="n">asking rent</th></tr>
+        <tr><td>2–3</td><td class="n">0%</td><td class="n">$700 – $875</td></tr>
+        <tr><td>4–5</td><td class="n">3–17%</td><td class="n">$685 – $850</td></tr>
+        <tr class="hl"><td>6–7</td><td class="n">25–33%</td><td class="n">$875 – $1,200</td></tr>
+      </table>
+      <p class="note">Water visibility measured per floor from NSW LiDAR line-of-sight (36 directions, 1.5 km).</p>
+    </div>
+    <div class="col">
+      <p><b>Suburb averages can't see this.</b> A postcode × bedroom rule from government bond data misses by <b>$100</b> a week.</p>
+      <p><b>The flat itself can.</b> Its own past rent and the rents of its neighbours already contain the floor, the view, the noise, the renovation.</p>
+      <p>The hard part is deciding <b>which evidence to trust</b>: stale adverts, relisted flats, changed bedroom counts.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Source: supplied past leases + Microburbs API adverts; LiDAR © NSW Spatial Services (CC BY)</span><span>2</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="kicker">Held-out result · window B (train ≤ 31 May, test Jun–Jul 2026, 2,898 adverts)</div>
+  <h2>From $100 to $45 — each step on the same adverts</h2>
+  <svg viewBox="0 0 1136 400" width="1136" height="400" style="font-family:inherit">
+    <g font-size="19" fill="#1c2733">
+      <!-- scale: $100 -> 600px -->
+      <text x="0" y="42">Government bond data</text><text x="0" y="64" font-size="15" fill="#6b7886">postcode × bedrooms (NSW Fair Trading)</text>
+      <rect x="330" y="22" width="600" height="44" fill="#c9d3dd"/><text x="940" y="52" font-weight="700">$100.0 · 51%</text>
+      <text x="0" y="132">Suburb medians</text><text x="0" y="154" font-size="15" fill="#6b7886">suburb × bedrooms × parking (simple estimate)</text>
+      <rect x="330" y="112" width="583" height="44" fill="#b4c4d4"/><text x="923" y="142" font-weight="700">$97.2 · 53%</text>
+      <text x="0" y="222">+ the flat's own past rent</text><text x="0" y="244" font-size="15" fill="#6b7886">moved with a repeat-rent index</text>
+      <rect x="330" y="202" width="337" height="44" fill="#7fa6cc"/><text x="677" y="232" font-weight="700">$56.1 · 69%</text>
+      <text x="0" y="312" font-weight="700">Ours</text><text x="0" y="334" font-size="15" fill="#6b7886">+ building comps · one vote · fresh · $5</text>
+      <rect x="330" y="292" width="270" height="44" fill="#1f6fb2"/><text x="610" y="322" font-weight="700" fill="#1f6fb2">$45.0 · 77%</text>
+    </g>
+    <text x="330" y="385" font-size="15" fill="#6b7886">bar = median absolute error; % = share within $100 · bond data restricted to files published before the cut-off</text>
+  </svg>
+  <div class="foot"><span>Window A (May) shows the same ladder: $100 → $92 → $57 → $45</span><span>3</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="kicker">Method</div>
+  <h2>Four steps, all rebuilt from adverts before each cut-off</h2>
+  <div class="step"><div class="num">1</div><p><b>Repeat-rent index.</b> Pairs of adverts of the <i>same</i> flat give the market move — location and quality cancel out. Held flat after July (Sydney unit asking rents stalled mid-2026).</p></div>
+  <div class="step"><div class="num">2</div><p><b>Own history.</b> The flat's latest advert <i>with the same bedroom count</i>, moved to today with the index. Adverts older than 3 years are dropped as stale.</p></div>
+  <div class="step"><div class="num">3</div><p><b>Same-building comparables, one flat one vote.</b> Other flats in the building with the same bedrooms; each neighbour counts once however often it relisted; the target is excluded; shrunk toward suburb medians when neighbours are few.</p></div>
+  <div class="step"><div class="num">4</div><p><b>Floor view and the grid.</b> LiDAR floor-view difference against those neighbours (coefficients estimated within buildings); parking premium for the second column; snapped to the $5 asking grid.</p></div>
+  <div class="foot"><span>Rules chosen on window A (May), frozen, then evaluated on window B (Jun–Jul); final model trained on everything ≤ 31 Jul</span><span>4</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="kicker">What we found</div>
+  <h2>Three non-obvious things the data told us</h2>
+  <div class="tiles" style="margin-top:8px">
+    <div class="tile"><b>Old ≠ useful</b><span>A flat's own advert from more than 3 years ago is <strong>worse than its neighbours' current rents</strong>: $53 → $46.5 on window A when we swapped them. 75% of repeat flats last advertised over a year ago.</span></div>
+    <div class="tile"><b>Same address ≠ same flat</b><span>When the bedroom count changes between adverts (whole-building ids, split lettings) the error <strong>multiplies by ~2.4</strong>. Own history only counts when bedrooms match.</span></div>
+    <div class="tile"><b>Rents live on a grid</b><span>84% of asking rents end in $0, 52% are multiples of $50, 26% of $100. Snapping to $5 took window A from <strong>$46.5 to $45</strong>.</span></div>
+  </div>
+  <p style="margin-top:30px">And one flat that relisted ten times no longer outvotes nine neighbours that advertised once.</p>
+  <div class="foot"><span>All numbers measured on real adverts with the date split</span><span>5</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="kicker">Public data, honestly</div>
+  <h2>Does the market pay for the view? Yes — inside the building.</h2>
+  <div class="cols">
+    <div class="col">
+      <p><b>NSW LiDAR 2013 + 2020</b> → height of 4,399 buildings, 79 built between surveys, and a line-of-sight test for every floor: water visible from 6% of floors 1–2, 60% of floors above 20.</p>
+      <table>
+        <tr><th>within the same building × bedrooms</th><th class="n">rent</th></tr>
+        <tr class="hl"><td>water in every direction vs none</td><td class="n">+16 to +19%</td></tr>
+        <tr><td>park in every direction vs none</td><td class="n">+4 to +6%</td></tr>
+        <tr><td>clear of every roof within 100 m</td><td class="n">+5%</td></tr>
+      </table>
+      <p class="note">22,593 flats in 2,901 building × bedroom groups; re-estimated in each window.</p>
+    </div>
+    <div class="col">
+      <p><b>What did not work:</b> building-level layers (water +25%, age −6% per decade, flight path −2%, new build −4% against suburb medians) <b>made errors worse</b> — the neighbours' rents already contain them. Rejected on window A.</p>
+      <p><b>What we kept:</b> only the floor-view <i>difference</i> to the comparable flats. Window A: share within $100 79.1% → 79.2%; window B neutral ($45, 77.1%), R² 0.877 → 0.880.</p>
+      <p class="note">Heat, canopy, flight path: insight maps, residuals within ±2% after the model.</p>
+    </div>
+  </div>
+  <div class="foot"><span>LiDAR © NSW Spatial Services (CC BY) · OSM © contributors (ODbL)</span><span>6</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="kicker">Validation</div>
+  <h2>Built only on earlier adverts, tested on later ones</h2>
+  <svg viewBox="0 0 1136 210" width="1136" height="210" style="font-family:inherit">
+    <g font-size="17" fill="#1c2733">
+      <text x="0" y="22" fill="#6b7886">2026:</text>
+      <g fill="#6b7886" font-size="15" text-anchor="middle"><text x="110" y="22">Jan</text><text x="210" y="22">Feb</text><text x="310" y="22">Mar</text><text x="410" y="22">Apr</text><text x="510" y="22">May</text><text x="610" y="22">Jun</text><text x="710" y="22">Jul</text><text x="810" y="22">Aug</text><text x="910" y="22">Sep</text></g>
+      <text x="0" y="66" font-weight="700">A</text><rect x="60" y="44" width="400" height="30" fill="#9ec5e8"/><rect x="460" y="44" width="100" height="30" fill="#f3a65a"/><text x="580" y="66">choose and freeze the rule</text>
+      <text x="0" y="116" font-weight="700">B</text><rect x="60" y="94" width="500" height="30" fill="#9ec5e8"/><rect x="560" y="94" width="200" height="30" fill="#f3a65a"/><text x="780" y="116">report: $45 · 77% · R² 0.88</text>
+      <text x="0" y="166" font-weight="700">final</text><rect x="60" y="144" width="700" height="30" fill="#9ec5e8"/><rect x="760" y="144" width="200" height="30" fill="#c9d3dd"/><text x="980" y="166">scored by organisers</text>
+      <rect x="60" y="190" width="14" height="14" fill="#9ec5e8"/><text x="82" y="202" font-size="15">train (index, medians, comps, premium rebuilt each time)</text>
+      <rect x="560" y="190" width="14" height="14" fill="#f3a65a"/><text x="582" y="202" font-size="15">held-out test adverts</text>
+    </g>
+  </svg>
+  <ul>
+    <li>No random splits; the code refuses any training row dated after the window's cut-off.</li>
+    <li>Candidates (one-vote strength, stale threshold, snapping, public layers) compared on A only; B evaluated with the frozen rule. The floor-view step was added on A after the base rule froze — both B results are reported.</li>
+    <li>Our estimates sit about 1% above later adverts — consistent with Sydney unit asking rents flattening after July.</li>
+  </ul>
+  <div class="foot"><span>Cut-off: nothing dated after 31 July 2026 from any source</span><span>7</span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="kicker">Who it helps · what's next</div>
+  <h2>A rent you can check flat by flat</h2>
+  <div class="cols">
+    <div class="col">
+      <ul>
+        <li><b>Tenants</b> see whether an asking rent is high for <i>this</i> floor of <i>this</i> building.</li>
+        <li><b>Landlords</b> set a rent that fits the flats around them — not the suburb average.</li>
+        <li><b>Investors</b> compare likely rent before they buy.</li>
+      </ul>
+      <p style="margin-top:22px"><b>Next:</b> unit orientation (which way the flat faces), strata sale prices within the building, and a live "evidence card" per estimate: own advert, neighbours used, floor-view adjustment.</p>
+    </div>
+    <div class="col">
+      <div class="box">
+        <p style="margin:0 0 8px"><b>Data and credits</b></p>
+        <p style="font-size:16px;margin:0;line-height:1.5">Microburbs hackathon files and API (used on the day, not republished) · NSW Spatial Services LiDAR, cadastre, boundaries (CC BY) · OpenStreetMap (ODbL) · NSW DPHI heat and canopy (CC BY 4.0) · NSW DCCEEW urban heat island (CC BY) · ABS Census 2021 (CC BY 4.0) · NSW Fair Trading rental bond lodgements (baseline only)</p>
+      </div>
+      <p class="note">Code, report.html and rents_Team-Opal.csv: Team-Opal repository.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Team-Opal · Microburbs hackathon · 7 Nov 2026</span><span>8</span></div>
+</section>
+
+</body></html>
